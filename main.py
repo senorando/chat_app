@@ -4,6 +4,7 @@ import os
 import flask
 import flask_sqlalchemy
 import flask_socketio
+import models
 
 app = flask.Flask(__name__)
 socketio = flask_socketio.SocketIO(app)
@@ -12,9 +13,21 @@ socketio.init_app(app, cors_allowed_origins="*")
 PORT = 8080
 IP = "0.0.0.0"
 
-"""
-TODO
-"""
+dotenv_path = join(dirname(__file__), 'sql.env')
+load_dotenv(dotenv_path)
+
+sql_user = os.environ['SQL_USER']
+sql_pwd = os.environ['SQL_PASSWORD']
+dbuser = os.environ['USER']
+
+database_uri = 'postgresql://{}:{}@localhost/postgres'.format(
+    sql_user, sql_pwd)
+
+app.config['SQLALCHEMY_DATABASE_URI'] = database_uri
+
+db = flask_sqlalchemy.SQLAlchemy(app)
+db.app = app
+
 
 @app.route('/')
 def hello():
@@ -33,11 +46,7 @@ def on_disconnect():
 
 @socketio.on('new number')
 def on_new_number(data):
-    print("Got an event for new number with data:", data)
-    rand_number = data['number']
-    socketio.emit('number received', {
-        'number': rand_number
-    })
+    print("TODO")
 
 if __name__ == '__main__': 
     socketio.run(
