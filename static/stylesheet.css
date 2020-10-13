@@ -1,0 +1,42 @@
+body {
+    font-family: Calibri;
+    font-size: 20px;
+    background-color: #00004c52;
+}
+h1 {
+    text-align: center;
+}
+
+.username {
+    
+}
+
+.actives {
+    
+}
+.user_list {
+    
+}
+
+.chat {
+    text-align: center;
+}
+.msg_list {
+    
+}
+.chat_msg {
+    
+}
+.people {
+    
+}
+.text {
+    
+}
+
+hr{
+    text-align: center;
+    border: solid;
+    color: #00004c;
+    width: 1250;
+}
