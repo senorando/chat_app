@@ -1,10 +1,20 @@
 body {
     font-family: Calibri;
     font-size: 20px;
-    background-color: #00004c52;
+    background-image: url('background.jpg');
+    color: white;
 }
+button {
+    display: inline;
+    background-color: white;
+    color: black;
+    align-items: center;
+    justify-content: center;
+}
+
 h1 {
     text-align: center;
+    color: white;
 }
 
 .username {
@@ -20,12 +30,21 @@ h1 {
 
 .chat {
     text-align: center;
+    background-color: #e2e2e2;
+    color: black;
+    height: 400px;
+    margin: 10px auto;
+    border-style: solid;
+    border-radius: 5px;
+    width: 70%;
+    padding: 5px 2px 5px 2px;
+    overflow-y: auto;
 }
 .msg_list {
     
 }
 .chat_msg {
-    
+    list-style-type: none;
 }
 .people {
     

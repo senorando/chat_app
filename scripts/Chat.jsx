@@ -3,15 +3,23 @@ import { animateScroll } from "react-scroll";
 
 import { Socket } from './Socket';
 
-export function Chatbox(props) {
-    const msgs = props.chatLog;
-    
+export function Chatbox() {
     function scroll() {
         animateScroll.scrollToBottom({
             containerId: "logs"
         });
     }
+    const [msgs, setMsgs] = useState([]);
+    
     useEffect(() => { scroll(); });
+    
+    useEffect(() => {
+        Socket.on('message received', (data) => { 
+            setMsgs(data['allMessages']);
+            console.log(data['allMessages']);
+        });
+    });
+    
     return (
         <div id="logs"
             className="chat">
@@ -21,10 +29,7 @@ export function Chatbox(props) {
                         key={ index }
                         index={ index }>
                         <span id="people">
-                            { msgs.name }
-                        </span>
-                        <span id="text">
-                            { msgs.text }
+                            { msgs }
                         </span>
                     </li>
                 ))}

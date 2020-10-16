@@ -2,16 +2,15 @@ import React, { useState } from 'react';
 
 import { Socket } from './Socket';
 
-export function Text_Box(props) {
-    console.log(props.name);
-    
+export function Text_Box() {
     function pushVal(val) {
         let in_message = document.getElementById("msg");
         let data = [
-            { name: props.name },
-            { message: in_message.value }
+            { 'message': in_message.value },
+            { 'user_id': Socket.id}
         ];
-        Socket.emit("Incoming Message... ", data);
+        console.log(data);
+        Socket.emit('new message', data);
         val.preventDefault();
         document.getElementById("msg").value = "";
     }
