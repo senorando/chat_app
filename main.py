@@ -6,14 +6,13 @@ from markupsafe import escape
 from sqlalchemy.orm import relationship
 
 from flask_socketio import SocketIO, join_room, leave_room;
-import models
 
 NEW_MESSAGE_CHANNEL = 'new message'
 MESSAGE_RECEIVED_CHANNEL = 'message received'
 USER_RECEIVED_CHANNEL = 'user received'
 
 app = flask.Flask(__name__)
-app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
+app.secret_key = 'b_5#y2L"F4Q8z\n\xec]/'
 
 socketio = flask_socketio.SocketIO(app)
 socketio.init_app(app, cors_allowed_origins="*")
@@ -32,6 +31,31 @@ db = flask_sqlalchemy.SQLAlchemy(app)
 db.init_app(app)
 db.app = app
 
+class Users(db.Model):
+    __table_args__ = {'extend_existing': True}
+    id = db.Column(db.String(50), primary_key=True)
+    name = db.Column(db.String(30))
+    messages = db.relationship('chatMessages', backref='users')
+    
+    def __init__(self, name, id):
+        self.name = name
+        self.id = id
+        
+    def __repr__(self):
+        return '<Username: %s>' % self.name
+class chatMessages(db.Model):
+    __table_args__ = {'extend_existing': True}
+    id = db.Column(db.Integer, primary_key=True)
+    text = db.Column(db.Text)
+    user_id = db.Column(db.String(50), db.ForeignKey('users.id'))
+    
+    def __init__(self, text, user_id):
+        self.text = text
+        self.user_id = user_id
+        
+    def __repr__(self):
+        return '<Message: %s>' % self.text
+
 db.create_all()
 db.session.commit()
 
@@ -39,7 +63,7 @@ db.session.commit()
 def emit_all_users(channel):
     all_users = [ \
         db_message.name for db_message \
-        in db.session.query(models.Users).all()]
+        in db.session.query(Users).all()]
         
     socketio.emit(channel, {
         'allUsers': all_users
@@ -47,7 +71,7 @@ def emit_all_users(channel):
 def emit_all_messages(channel):
     all_messages = [ \
         db_message.text for db_message \
-        in db.session.query(models.chatMessages).all()]
+        in db.session.query(chatMessages).all()]
     socketio.emit(channel, {
         'allMessages': all_messages
     })
@@ -65,11 +89,11 @@ def genUserName():
 @socketio.on('new message')
 def on_new_message(data):
     print("\nGot a new message: " + data[0]['message'] + 
-        "\nFrom User: " + models.Users.query.filter_by(id = data[1]['user_id']).first().name
+        "\nFrom User: " + Users.query.filter_by(id = data[1]['user_id']).first().name
         )
     message = data[0]['message']
-    username = models.Users.query.filter_by(id = data[1]['user_id']).first().name
-    db.session.add(models.chatMessages((username + ": " + message), data[1]['user_id']))
+    username = Users.query.filter_by(id = data[1]['user_id']).first().name
+    db.session.add(chatMessages((username + ": " + message), data[1]['user_id']))
     db.session.commit()
     
     emit_all_messages(MESSAGE_RECEIVED_CHANNEL)
@@ -83,7 +107,7 @@ def on_connect():
         'name': user,
         'user_id': request.sid
     })
-    db.session.add(models.Users(name = user, id = request.sid))
+    db.session.add(Users(name = user, id = request.sid))
     db.session.commit()
     emit_all_messages(MESSAGE_RECEIVED_CHANNEL)
     emit_all_users(USER_RECEIVED_CHANNEL)
