@@ -1,12 +1,20 @@
 from os.path import join, dirname
 from dotenv import load_dotenv
-import os
-import flask
-import flask_sqlalchemy
-import flask_socketio
+import os, flask, flask_sqlalchemy, flask_socketio, random
+from flask import session, redirect, url_for, request
+from markupsafe import escape
+from sqlalchemy.orm import relationship
+
+from flask_socketio import SocketIO, join_room, leave_room;
 import models
 
+NEW_MESSAGE_CHANNEL = 'new message'
+MESSAGE_RECEIVED_CHANNEL = 'message received'
+USER_RECEIVED_CHANNEL = 'user received'
+
 app = flask.Flask(__name__)
+app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
+
 socketio = flask_socketio.SocketIO(app)
 socketio.init_app(app, cors_allowed_origins="*")
 
@@ -16,38 +24,81 @@ IP = "0.0.0.0"
 dotenv_path = join(dirname(__file__), 'sql.env')
 load_dotenv(dotenv_path)
 
-sql_user = os.environ['SQL_USER']
-sql_pwd = os.environ['SQL_PASSWORD']
-dbuser = os.environ['USER']
-
-database_uri = 'postgresql://{}:{}@localhost/postgres'.format(
-    sql_user, sql_pwd)
+database_uri = os.environ['DATABASE_URL']
 
 app.config['SQLALCHEMY_DATABASE_URI'] = database_uri
 
 db = flask_sqlalchemy.SQLAlchemy(app)
+db.init_app(app)
 db.app = app
 
+db.create_all()
+db.session.commit()
 
-@app.route('/')
-def hello():
-    return flask.render_template('index.html')
-
+#----------------------------------------------------------------------------------------------#
+def emit_all_users(channel):
+    all_users = [ \
+        db_message.name for db_message \
+        in db.session.query(models.Users).all()]
+        
+    socketio.emit(channel, {
+        'allUsers': all_users
+    })
+def emit_all_messages(channel):
+    all_messages = [ \
+        db_message.text for db_message \
+        in db.session.query(models.chatMessages).all()]
+    socketio.emit(channel, {
+        'allMessages': all_messages
+    })
+def genUserName():
+    guest_n1 = ["strange", "smelly", "hungry", "angry", "rich", "annoying", "goofy", "lonely", "lazy", "edible"];
+    guest_n2 = ["Dinosaur", "Cow", "Donkey", "Hippo", "Person", "Tortilla", "Dog", "Cat", "Turtle", "Sloth"];
+    rand = random.randint(0, 50)
+    rand_n1 = random.randint(0, len(guest_n1) - 1)
+    rand_n2 = random.randint(0, len(guest_n2) - 1)
+    full_name = (guest_n1[rand_n1] + guest_n2[rand_n2] + str(rand))
+    
+    return full_name;
+#----------------------------------------------------------------------------------------------#
+ 
+@socketio.on('new message')
+def on_new_message(data):
+    print("\nGot a new message: " + data[0]['message'] + 
+        "\nFrom User: " + models.Users.query.filter_by(id = data[1]['user_id']).first().name
+        )
+    message = data[0]['message']
+    username = models.Users.query.filter_by(id = data[1]['user_id']).first().name
+    db.session.add(models.chatMessages((username + ": " + message), data[1]['user_id']))
+    db.session.commit()
+    
+    emit_all_messages(MESSAGE_RECEIVED_CHANNEL)
+    
 @socketio.on('connect')
 def on_connect():
-    print('Someone connected!')
-    socketio.emit('connected', {
-        'test': 'Connected'
+    user = genUserName()
+    print ('\nSomeone connected!' + '\nUsername: ' + user + '\nSID: ' + request.sid + "\n")
+    
+    socketio.emit('set user', {
+        'name': user,
+        'user_id': request.sid
     })
-
+    db.session.add(models.Users(name = user, id = request.sid))
+    db.session.commit()
+    emit_all_messages(MESSAGE_RECEIVED_CHANNEL)
+    emit_all_users(USER_RECEIVED_CHANNEL)
+    
+    
 @socketio.on('disconnect')
 def on_disconnect():
-    print ('Someone disconnected!')
+    print ('\nSomeone disconnected!')
 
-@socketio.on('new number')
-def on_new_number(data):
-    print("TODO")
-
+@app.route('/')
+def index():
+    emit_all_users('connect')
+    emit_all_messages(NEW_MESSAGE_CHANNEL)
+    return flask.render_template('index.html')
+    
 if __name__ == '__main__': 
     socketio.run(
         app,

@@ -10,11 +10,12 @@ export function Content(props) {
     
     function nextLine() {
         useEffect(() => {
-            Socket.on('Message Received...', (data) => {
-                updateChat(data);
+            Socket.on('new message', (data) => {
+                console.log("Received messages from server...\n" + data['allMessages']);
+                updateChat(data['allMessages']);
             });
             return () => {
-                Socket.off('Message Received...', "");
+                Socket.off('new message', "");
             }
         });
     }

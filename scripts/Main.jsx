@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+
 import * as ReactDOM from 'react-dom';
 
 import { Content } from './Content';
@@ -6,25 +7,25 @@ import { Users } from './Users';
 import { Socket } from './Socket';
 
 export function App() {
-    const [user_info, setInfo] = useState("");
-    function getInfo() {
+    const [userName, setName] = useState();
+    const [currUsr, setUsr] = useState();
+    
+    function getNewUser() {
         useEffect(() => {
-            Socket.on('Connected', (data) => {
-                if(data[2].sess_id == Socket.id) {
-                    const username = data[3].name;
-                    setInfo(username);
+            Socket.on('set user', (data) => {
+                if(data['user_id'] == Socket.id){
+                    console.log("New User: " + data['name'] + "\nSID: " + Socket.id);
+                    setUsr(data['name']);
                 }
+                setName(data['name']);
             });
-            return () => {
-                Socket.off('Disconnected', "")
-            }
         });
     }
-    getInfo();
+    getNewUser();
     return (
         <div>
-            <Content user_info={ user_info } />
-            <p id="username"> Here's your alias TODO{ user_info } </p>
+            <Content user_info={ currUsr } />
+            <p id="username"> Welcome! Your name is: <strong>{ currUsr } </strong></p>
             <Users />
         </div>
         );
