@@ -77,12 +77,12 @@ def emit_all_messages(channel):
         'allMessages': all_messages
     })
 def genUserName():
-    guest_n1 = ["strange", "smelly", "hungry", "angry", "rich", "annoying", "goofy", "lonely", "lazy", "edible"];
-    guest_n2 = ["Dinosaur", "Cow", "Donkey", "Hippo", "Person", "Tortilla", "Dog", "Cat", "Turtle", "Sloth"];
+    guest_n1 = ["strange", "smelly", "hungry", "angry", "rich", "annoying", "goofy", "lonely", "lazy", "edible", "adorable", "homely", "impossible", "disturbed", "agreeable", "shy", "dull", "spotless", "jolly", "jittery", "annoying", "doubtful", "dizzy", "itchy", "inquisitive", "splendid", "lively", "breakable", "lucky", "super", "tender", "troubled", "muddy", "fancy", "cautious", "fragile", "mushy", "tasty", "uptight", "obnoxious", "glamorous", "clumsy", "concerned", "odd", "clever", "grieving", "grotesque", "grumpy", "poised", "plain", "wild", "witty", "prickly", "wicked", "hilarious", "defeated", "puzzled", "boorish", "irksome", "obtuse"];
+    guest_n2 = ["Dinosaur", "Turtle", "Cow", "Donkey", "Hippo", "Person", "Tortilla", "Dog", "Cat", "Turtle", "Sloth", "Sock", "Monkey", "Baby", "Hero", "Peacock", "Boar", "Caterpillar", "Clam", "Sardine", "Walrus", "Bee", "Iguana", "Hamster", "Aardvark", "Alpaca", "Barracuda", "Baboon", "Camel", "Armadillo", "Chicken", "Dragon", "Eagle", "Elephant", "Ferret", "Flamingo", "Fox", "Panda", "Giraffe", "Hawk", "Gazelle", "Hog", "Jellyfish", "Lemur", "Llama", "Narwhal", "Otter", "Penguin", "Pelican", "Raccoon", "Sheep", "Snail", "Turkey", "Weasel"];
     rand = random.randint(0, 50)
     rand_n1 = random.randint(0, len(guest_n1) - 1)
     rand_n2 = random.randint(0, len(guest_n2) - 1)
-    full_name = (guest_n1[rand_n1] + guest_n2[rand_n2] + str(rand))
+    full_name = (guest_n1[rand_n1] + "_" + guest_n2[rand_n2])
     
     return full_name;
 #-----------------------------------#
