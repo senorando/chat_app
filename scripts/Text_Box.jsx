@@ -3,15 +3,15 @@ import React, { useState } from 'react';
 import { Socket } from './Socket';
 
 export function Text_Box() {
-    function pushVal(val) {
+    function pushVal(e) {
         let in_message = document.getElementById("msg");
         let data = [
             { 'message': in_message.value },
             { 'user_id': Socket.id}
         ];
-        console.log(data);
+        console.log("Sent message to the server!\n\"" + data[0]['message'] + "\"");
         Socket.emit('new message', data);
-        val.preventDefault();
+        e.preventDefault();
         document.getElementById("msg").value = "";
     }
     return (

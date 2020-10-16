@@ -7,12 +7,10 @@ export function Users() {
     
     function getUsers() {
         useEffect(() => {
-            Socket.on('users received', (data) => { 
-                console.log(data);
-                const user_name = data;
-                // setUsers(user_name);
-                // console.log("New User: " + user_name);
+            Socket.on('active users', (data) => {
+                setUsers(data['activeUsers']);
                 });
+            Socket.off('active users', '');
         });
     }
     getUsers();

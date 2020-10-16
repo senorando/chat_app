@@ -9,10 +9,10 @@ from flask_socketio import SocketIO, join_room, leave_room;
 
 NEW_MESSAGE_CHANNEL = 'new message'
 MESSAGE_RECEIVED_CHANNEL = 'message received'
-USER_RECEIVED_CHANNEL = 'user received'
+USER_RECEIVED_CHANNEL = 'users received'
 
 app = flask.Flask(__name__)
-app.secret_key = 'b_5#y2L"F4Q8z\n\xec]/'
+app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
 
 socketio = flask_socketio.SocketIO(app)
 socketio.init_app(app, cors_allowed_origins="*")
@@ -30,7 +30,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = database_uri
 db = flask_sqlalchemy.SQLAlchemy(app)
 db.init_app(app)
 db.app = app
-
+#-----------------------------------#
 class Users(db.Model):
     __table_args__ = {'extend_existing': True}
     id = db.Column(db.String(50), primary_key=True)
@@ -55,11 +55,11 @@ class chatMessages(db.Model):
         
     def __repr__(self):
         return '<Message: %s>' % self.text
-
+#-----------------------------------#
 db.create_all()
 db.session.commit()
-
-#----------------------------------------------------------------------------------------------#
+active_users = []
+#-----------------------------------#
 def emit_all_users(channel):
     all_users = [ \
         db_message.name for db_message \
@@ -84,7 +84,7 @@ def genUserName():
     full_name = (guest_n1[rand_n1] + guest_n2[rand_n2] + str(rand))
     
     return full_name;
-#----------------------------------------------------------------------------------------------#
+#-----------------------------------#
  
 @socketio.on('new message')
 def on_new_message(data):
@@ -102,10 +102,14 @@ def on_new_message(data):
 def on_connect():
     user = genUserName()
     print ('\nSomeone connected!' + '\nUsername: ' + user + '\nSID: ' + request.sid + "\n")
-    
+    active_users.append(user)
     socketio.emit('set user', {
         'name': user,
         'user_id': request.sid
+    })
+    
+    socketio.emit('active users', {
+        'activeUsers': active_users
     })
     db.session.add(Users(name = user, id = request.sid))
     db.session.commit()
@@ -115,6 +119,11 @@ def on_connect():
     
 @socketio.on('disconnect')
 def on_disconnect():
+    active_users.remove(Users.query.filter_by(id = request.sid).first().name)
+    
+    socketio.emit('active users', {
+        'activeUsers': active_users
+    })
     print ('\nSomeone disconnected!')
 
 @app.route('/')

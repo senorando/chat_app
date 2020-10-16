@@ -16,7 +16,6 @@ export function Chatbox() {
     useEffect(() => {
         Socket.on('message received', (data) => { 
             setMsgs(data['allMessages']);
-            console.log(data['allMessages']);
         });
     });
     
