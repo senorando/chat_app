@@ -61,6 +61,5 @@ If that doesn't work: `sudo vim $(psql -c "show hba_file;" | grep pg_hba.conf)`
   c) Preview Running Application (might have to clear your cache by doing a hard refresh)    
 
 ### Known Bugs
-    -Active Users don't display
     -Users Remain in DB after logout
     -CSS needs to get fixed
