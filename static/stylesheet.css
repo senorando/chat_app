@@ -4,32 +4,54 @@ body {
     background-image: url('background.jpg');
     color: white;
 }
-button {
+form{
+    text-align:center;
+}
+button{
     display: inline;
-    background-color: white;
+    background-color: #e2e2e2;
     color: black;
+    border-radius: 8px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
     align-items: center;
     justify-content: center;
+    padding: 15px 20px;
 }
-
+input{
+    border-style: solid;
+    border-radius: 5px;
+    display: inline;
+    margin-right: 5px;
+    padding: 15px 1.25em;
+    font-size: 12px;
+    width: 60%;
+}
+#chat_msg{
+    border: 2px solid #dedede;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 15px 4px;
+    margin: 10px 0;
+}
+#chat_bot{
+    border-style: dotted;
+    background-color: white;
+    border-radius: 5px;
+    padding: 15px 4px;
+    margin: 10px 0;
+}
 h1 {
     text-align: center;
     color: white;
 }
 
-.username {
-    
+#username {
+    font-size: 30px;
+    margin: 10px auto;
+    width: 70%;
 }
-
-.actives {
-    
-}
-.user_list {
-    
-}
-
-.chat {
-    text-align: center;
+#logs.chat{
+    text-align: left;
     background-color: #e2e2e2;
     color: black;
     height: 400px;
@@ -41,21 +63,22 @@ h1 {
     overflow-y: auto;
 }
 .msg_list {
-    
+    text-align: center
 }
-.chat_msg {
+ul {
     list-style-type: none;
+    margin-right: 50px;
 }
-.people {
-    
+.active_user {
+    color: black;
+    width: 30%;
+    border-style: solid;
+    border-radius: 5px;
+    background-color: #e2e2e2;
+    list-style-type: none;
+    padding: 5px 2px 5px 2px;
+    margin: auto;
 }
-.text {
-    
-}
-
-hr{
-    text-align: center;
-    border: solid;
-    color: #00004c;
-    width: 1250;
+#user_list {
+    margin: 0px;
 }

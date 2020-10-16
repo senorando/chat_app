@@ -62,4 +62,3 @@ If that doesn't work: `sudo vim $(psql -c "show hba_file;" | grep pg_hba.conf)`
 
 ### Known Bugs
     -Users Remain in DB after logout
-    -CSS needs to get fixed

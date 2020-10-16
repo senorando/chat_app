@@ -59,6 +59,7 @@ class chatMessages(db.Model):
 db.create_all()
 db.session.commit()
 active_users = []
+numUsers = 0
 #-----------------------------------#
 def emit_all_users(channel):
     all_users = [ \
@@ -102,6 +103,8 @@ def on_new_message(data):
 def on_connect():
     user = genUserName()
     print ('\nSomeone connected!' + '\nUsername: ' + user + '\nSID: ' + request.sid + "\n")
+    global numUsers
+    numUsers += 1
     active_users.append(user)
     socketio.emit('set user', {
         'name': user,
@@ -109,7 +112,8 @@ def on_connect():
     })
     
     socketio.emit('active users', {
-        'activeUsers': active_users
+        'activeUsers': active_users,
+        'numUsers': numUsers
     })
     db.session.add(Users(name = user, id = request.sid))
     db.session.commit()
@@ -120,9 +124,12 @@ def on_connect():
 @socketio.on('disconnect')
 def on_disconnect():
     active_users.remove(Users.query.filter_by(id = request.sid).first().name)
-    
+    global numUsers 
+    numUsers -= 1
     socketio.emit('active users', {
-        'activeUsers': active_users
+        'activeUsers': active_users,
+        'numUsers': numUsers
+        
     })
     print ('\nSomeone disconnected!')
 
