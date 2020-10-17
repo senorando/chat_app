@@ -7,6 +7,9 @@ body {
 form{
     text-align:center;
 }
+h4 {
+    text-align: center;
+}
 button{
     display: inline;
     background-color: #e2e2e2;
@@ -26,10 +29,19 @@ input{
     font-size: 12px;
     width: 60%;
 }
-#chat_msg{
-    border: 2px solid #dedede;
+#left{
+    text-align: left;
+    border: #0a00ff;
+    background-color: #e5e4ff;
+    border-style: none none none solid;
+    padding: 15px 4px;
+    margin: 10px 0;
+}
+#right{
+    text-align: right;
+    border: #ffffff;
     background-color: #f1f1f1;
-    border-radius: 5px;
+    border-style: none solid none none;
     padding: 15px 4px;
     margin: 10px 0;
 }
@@ -50,11 +62,11 @@ h1 {
     margin: 10px auto;
     width: 70%;
 }
-#logs.chat{
+#msg_list{
     text-align: left;
     background-color: #e2e2e2;
     color: black;
-    height: 400px;
+    height: 500px;
     margin: 10px auto;
     border-style: solid;
     border-radius: 5px;
@@ -62,16 +74,14 @@ h1 {
     padding: 5px 2px 5px 2px;
     overflow-y: auto;
 }
-.msg_list {
-    text-align: center
-}
 ul {
     list-style-type: none;
     margin-right: 50px;
 }
 .active_user {
     color: black;
-    width: 30%;
+    width: 20%;
+    height: 200px;
     border-style: solid;
     border-radius: 5px;
     background-color: #e2e2e2;

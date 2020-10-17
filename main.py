@@ -70,6 +70,7 @@ def emit_all_users(channel):
         'allUsers': all_users
     })
 def emit_all_messages(channel):
+    global all_messages
     all_messages = [ \
         db_message.text for db_message \
         in db.session.query(chatMessages).all()]
@@ -86,7 +87,6 @@ def genUserName():
     
     return full_name;
 #-----------------------------------#
- 
 @socketio.on('new message')
 def on_new_message(data):
     print("\nGot a new message: " + data[0]['message'] + 
@@ -94,7 +94,13 @@ def on_new_message(data):
         )
     message = data[0]['message']
     username = Users.query.filter_by(id = data[1]['user_id']).first().name
-    db.session.add(chatMessages((username + ": " + message), data[1]['user_id']))
+    if(len(all_messages) % 2 == 1):
+        #left
+        msg = (username +": " + message)
+    else:
+        msg = (message + " :" + username)
+        
+    db.session.add(chatMessages(msg, data[1]['user_id']))
     db.session.commit()
     
     emit_all_messages(MESSAGE_RECEIVED_CHANNEL)
@@ -110,7 +116,6 @@ def on_connect():
         'name': user,
         'user_id': request.sid
     })
-    
     socketio.emit('active users', {
         'activeUsers': active_users,
         'numUsers': numUsers

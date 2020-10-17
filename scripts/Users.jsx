@@ -16,10 +16,17 @@ export function Users() {
         });
     }
     getUsers();
-    
+    function usersOn() {
+        if(numUsers % 2 == 1) {
+            return <h4 id="actives">You're the only user online :(</h4>;
+        }else{
+            return <h4 id="actives"><strong>{ numUsers }</strong> Online Users</h4>
+        }
+    }
+    let head = usersOn()
     return (
             <div className="active_user">
-                <h4 id="actives"><strong>{ numUsers }</strong> Online Users</h4>
+                { head }
                 <ol id="user_list">
                     {users.map(( users, index ) => (
                         <li id="people"
