@@ -1,4 +1,4 @@
-# Milestone 1 for Project 2
+# Milestone 2 for Project 2
 
 #### To use this repository you must install the following APIs/Frameworks
     -Flask
