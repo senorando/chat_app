@@ -6,7 +6,7 @@ import { Socket } from './Socket';
 export function Chatbox() {
     function scroll() {
         animateScroll.scrollToBottom({
-            containerId: "msg_list"
+        containerId: "msg_list"
         });
     }
     const [msgs, setMsgs] = useState([]);
@@ -24,7 +24,7 @@ export function Chatbox() {
             className="chat">
             <ul id="msg_list">
                 {msgs.map((msgs,index) => {
-                        if(index%2 == 1)
+                        if(index % 2 == 1)
                             return <li id="left" key={index}>
                             <span id="people">{msgs}</span>
                             </li>

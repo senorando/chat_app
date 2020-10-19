@@ -4,8 +4,8 @@ import os, flask, flask_sqlalchemy, flask_socketio, random
 from flask import session, redirect, url_for, request
 from markupsafe import escape
 from sqlalchemy.orm import relationship
-
-from flask_socketio import SocketIO, join_room, leave_room;
+from flask_socketio import SocketIO, join_room, leave_room
+import bot
 
 NEW_MESSAGE_CHANNEL = 'new message'
 MESSAGE_RECEIVED_CHANNEL = 'message received'
@@ -61,6 +61,16 @@ db.session.commit()
 active_users = []
 numUsers = 0
 #-----------------------------------#
+bot = bot.chatBot()
+botID = "BOT"
+print("\nChecking to see if BimboBOT exists...")
+if db.session.query(Users.id).filter_by(name = "BimboBOT").scalar() is None:
+    print("\nCreated DB Entry for BimboBOT!")
+    db.session.add(Users(name = "BimboBOT", id = botID))
+    db.session.commit()
+else:
+    print("\nDB Entry for BimboBOT Exists!")
+#-----------------------------------#
 def emit_all_users(channel):
     all_users = [ \
         db_message.name for db_message \
@@ -105,6 +115,41 @@ def on_new_message(data):
     
     emit_all_messages(MESSAGE_RECEIVED_CHANNEL)
     
+@socketio.on('new command')
+def on_new_command(data):
+    print("\nGot a new command: " + data[0]['message'] + 
+        "\nFrom User: " + Users.query.filter_by(id = data[1]['user_id']).first().name
+        )
+    command = data[0]['message']
+    username = Users.query.filter_by(id = data[1]['user_id']).first().name
+    # Add User Message
+    if(len(all_messages) % 2 == 1):
+        #left
+        msg = (username +": " + command)
+    else:
+        #right
+        msg = (command + " :" + username)
+        
+    db.session.add(chatMessages(msg, data[1]['user_id']))
+    db.session.commit()
+    
+    emit_all_messages(MESSAGE_RECEIVED_CHANNEL)
+    
+    #Add Bot Response
+    bot_response = bot.command(command)
+    if(len(all_messages) % 2 == 1):
+        #left
+        res = ("BimboBOT: " + bot_response)
+    else:
+        #right
+        res = (bot_response + " :" + botID)
+    
+    db.session.add(chatMessages(res, botID))
+    db.session.commit()
+    
+    emit_all_messages(MESSAGE_RECEIVED_CHANNEL)
+    print(bot_response)
+    
 @socketio.on('connect')
 def on_connect():
     user = genUserName()
@@ -124,7 +169,6 @@ def on_connect():
     db.session.commit()
     emit_all_messages(MESSAGE_RECEIVED_CHANNEL)
     emit_all_users(USER_RECEIVED_CHANNEL)
-    
     
 @socketio.on('disconnect')
 def on_disconnect():

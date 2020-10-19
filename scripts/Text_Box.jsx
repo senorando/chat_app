@@ -9,8 +9,14 @@ export function Text_Box() {
             { 'message': in_message.value },
             { 'user_id': Socket.id}
         ];
-        console.log("Sent message to the server!\n\"" + data[0]['message'] + "\"");
-        Socket.emit('new message', data);
+        
+        if( data[0]['message'][0] == '!' && data[0]['message'][1] == '!'){
+            console.log("Sent command to the server!\n\"" + data[0]['message'] + "\"");
+            Socket.emit('new command', data);
+        }else{
+            console.log("Sent message to the server!\n\"" + data[0]['message'] + "\"");
+            Socket.emit('new message', data);
+        }
         e.preventDefault();
         document.getElementById("msg").value = "";
     }
