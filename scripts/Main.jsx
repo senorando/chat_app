@@ -7,7 +7,6 @@ import { Users } from './Users';
 import { Socket } from './Socket';
 
 export function App() {
-    const [userName, setName] = useState();
     const [currUsr, setUsr] = useState();
     
     function getNewUser() {
@@ -17,7 +16,6 @@ export function App() {
                     console.log("New User: " + data['name'] + "\nSID: " + Socket.id);
                     setUsr(data['name']);
                 }
-                setName(data['name']);
             });
             Socket.off('set user', '');
         });

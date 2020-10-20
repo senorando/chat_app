@@ -1,10 +1,11 @@
 from os.path import join, dirname
 from dotenv import load_dotenv
-import os, flask, flask_sqlalchemy, flask_socketio, random
+import os, flask, flask_sqlalchemy, flask_socketio, random, datetime, re
 from flask import session, redirect, url_for, request
 from markupsafe import escape
 from sqlalchemy.orm import relationship
 from flask_socketio import SocketIO, join_room, leave_room
+
 import bot
 
 NEW_MESSAGE_CHANNEL = 'new message'
@@ -49,19 +50,21 @@ class chatMessages(db.Model):
     text = db.Column(db.Text)
     user_id = db.Column(db.String(50), db.ForeignKey('users.id'))
     name = db.Column(db.String(50))
+    time = db.Column(db.String(50))
     
-    def __init__(self, text, name):
+    def __init__(self, text, name, time):
         self.text = text
         self.name = name
-        #self.name = Users.query.filter_by(id = self.user_id).first().name
+        self.time = time
         
     def __repr__(self):
-        return '<%s: %s>' % (self.name, self.text)
+        return '<%s: %s \n%s>' % (self.name, self.text, self.time)
 #-----------------------------------#
 db.create_all()
 db.session.commit()
 active_users = []
 numUsers = 0
+months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 #-----------------------------------#
 bot = bot.chatBot()
 botID = "BimboBOT"
@@ -85,7 +88,11 @@ def emit_all_messages(channel):
     global all_messages
     all_messages = []
     for msg in db.session.query(chatMessages).all():
-        all_messages.append({ 'name': msg.name, 'text': msg.text })
+        all_messages.append({ 
+            'name': msg.name, 
+            'text': msg.text, 
+            'time': msg.time
+        })
     socketio.emit(channel, {
         'allMessages': all_messages
     })
@@ -98,17 +105,32 @@ def genUserName():
     full_name = (guest_n1[rand_n1] + "_" + guest_n2[rand_n2])
     
     return full_name;
+def findUrl(string):
+    regex = r"(?i)\b((?:https?://|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'\".,<>?«»“”‘’]))"
+    url = re.findall(regex,string)       
+    return [x[0] for x in url]
 #-----------------------------------#
 @socketio.on('new message')
 def on_new_message(data):
     print("\nGot a new message: " + data['message'] + 
         "\nFrom User: " + data['name']
         )
+    isURL = False
     msg = data['message']
     username = data['name']
-        
-    db.session.add(chatMessages(msg, username))
-    db.session.commit()
+    time = datetime.datetime.now()
+    time_str = (months[time.month - 1] + " " + str(time.day) + " \n@" + time.strftime("%H:%M:%S"))
+    
+    if len(findUrl(msg)) == 1:
+        url = findUrl(msg)[0]
+        isURL = True
+        print(url)
+        db.session.add(chatMessages(msg, username, time_str))
+        db.session.commit()
+    else:
+        url = "none"
+        db.session.add(chatMessages(msg, username, time_str))
+        db.session.commit()
     
     emit_all_messages('message received')
     
@@ -119,17 +141,21 @@ def on_new_command(data):
         )
     msg = data['message']
     username = data['name']
-        
-    db.session.add(chatMessages(msg, username))
+    time = datetime.datetime.now()
+    time_str = (months[time.month - 1] + " " + str(time.day) + " \n@" + time.strftime("%H:%M:%S"))
+    
+    db.session.add(chatMessages(msg, username, time_str))
     db.session.commit()
     
     emit_all_messages(MESSAGE_RECEIVED_CHANNEL)
     
     bot_response = bot.command(msg)
+    time = datetime.datetime.now()
+    time_str = (months[time.month - 1] + " " + str(time.day) + " \n@" + time.strftime("%H:%M:%S"))
     
-    db.session.add(chatMessages(bot_response, botID))
+    db.session.add(chatMessages(bot_response, botID, time_str))
     db.session.commit()
-    
+
     emit_all_messages(MESSAGE_RECEIVED_CHANNEL)
     
 @socketio.on('connect')

@@ -34,6 +34,7 @@ input{
     border: #0a00ff;
     background-color: #e5e4ff;
     border-style: none none none solid;
+    border-radius: 5px;
     padding: 15px 4px;
     margin: 10px 0;
 }
@@ -42,15 +43,22 @@ input{
     border: #ffffff;
     background-color: #f1f1f1;
     border-style: none solid none none;
+    border-radius: 5px;
     padding: 15px 4px;
     margin: 10px 0;
 }
 #chat_bot{
-    border-style: dotted;
-    background-color: white;
+    border: black dotted;
+    background-color: gray;
     border-radius: 5px;
     padding: 15px 4px;
     margin: 10px 0;
+    color: white;
+    font-style: italic;
+}
+#time {
+    font-style: italic;
+    font-size: 12px;
 }
 h1 {
     text-align: center;
