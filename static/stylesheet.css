@@ -29,7 +29,7 @@ input{
     font-size: 12px;
     width: 60%;
 }
-#left{
+#others{
     text-align: left;
     border: #0a00ff;
     background-color: #e5e4ff;
@@ -37,7 +37,7 @@ input{
     padding: 15px 4px;
     margin: 10px 0;
 }
-#right{
+#self{
     text-align: right;
     border: #ffffff;
     background-color: #f1f1f1;

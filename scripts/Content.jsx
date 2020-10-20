@@ -10,13 +10,13 @@ export function Content(props) {
     
     function nextLine() {
         useEffect(() => {
-            Socket.on('new message', (data) => {
+            Socket.on('message received', (data) => {
                 console.log("Received messages from server...\n" + data['allMessages']);
                 updateChat(data['allMessages']);
             });
-            return () => {
-                Socket.off('new message', "");
-            }
+            return (() => {
+                Socket.off('message received', "");
+            });
         });
     }
     nextLine();
@@ -24,7 +24,7 @@ export function Content(props) {
     return (
         <div>
             <h1 id="title">Not Discord</h1>
-            <Chatbox chatLog={ chatLog } />
+            <Chatbox name = { props.user_info } chatLog={ chatLog } />
             <Text_Box name={ props.user_info } />
         </div>
     );

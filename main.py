@@ -48,13 +48,15 @@ class chatMessages(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     text = db.Column(db.Text)
     user_id = db.Column(db.String(50), db.ForeignKey('users.id'))
+    name = db.Column(db.String(50))
     
-    def __init__(self, text, user_id):
+    def __init__(self, text, name):
         self.text = text
-        self.user_id = user_id
+        self.name = name
+        #self.name = Users.query.filter_by(id = self.user_id).first().name
         
     def __repr__(self):
-        return '<Message: %s>' % self.text
+        return '<%s: %s>' % (self.name, self.text)
 #-----------------------------------#
 db.create_all()
 db.session.commit()
@@ -62,14 +64,14 @@ active_users = []
 numUsers = 0
 #-----------------------------------#
 bot = bot.chatBot()
-botID = "BOT"
+botID = "BimboBOT"
 print("\nChecking to see if BimboBOT exists...")
 if db.session.query(Users.id).filter_by(name = "BimboBOT").scalar() is None:
-    print("\nCreated DB Entry for BimboBOT!")
+    print("Created DB Entry for BimboBOT!\n")
     db.session.add(Users(name = "BimboBOT", id = botID))
     db.session.commit()
 else:
-    print("\nDB Entry for BimboBOT Exists!")
+    print("DB Entry for BimboBOT Exists!\n")
 #-----------------------------------#
 def emit_all_users(channel):
     all_users = [ \
@@ -81,9 +83,9 @@ def emit_all_users(channel):
     })
 def emit_all_messages(channel):
     global all_messages
-    all_messages = [ \
-        db_message.text for db_message \
-        in db.session.query(chatMessages).all()]
+    all_messages = []
+    for msg in db.session.query(chatMessages).all():
+        all_messages.append({ 'name': msg.name, 'text': msg.text })
     socketio.emit(channel, {
         'allMessages': all_messages
     })
@@ -99,56 +101,36 @@ def genUserName():
 #-----------------------------------#
 @socketio.on('new message')
 def on_new_message(data):
-    print("\nGot a new message: " + data[0]['message'] + 
-        "\nFrom User: " + Users.query.filter_by(id = data[1]['user_id']).first().name
+    print("\nGot a new message: " + data['message'] + 
+        "\nFrom User: " + data['name']
         )
-    message = data[0]['message']
-    username = Users.query.filter_by(id = data[1]['user_id']).first().name
-    if(len(all_messages) % 2 == 1):
-        #left
-        msg = (username +": " + message)
-    else:
-        msg = (message + " :" + username)
+    msg = data['message']
+    username = data['name']
         
-    db.session.add(chatMessages(msg, data[1]['user_id']))
+    db.session.add(chatMessages(msg, username))
     db.session.commit()
     
-    emit_all_messages(MESSAGE_RECEIVED_CHANNEL)
+    emit_all_messages('message received')
     
 @socketio.on('new command')
 def on_new_command(data):
-    print("\nGot a new command: " + data[0]['message'] + 
-        "\nFrom User: " + Users.query.filter_by(id = data[1]['user_id']).first().name
+    print("\nGot a new command: " + data['message'] + 
+        "\nFrom User: " + data['name']
         )
-    command = data[0]['message']
-    username = Users.query.filter_by(id = data[1]['user_id']).first().name
-    # Add User Message
-    if(len(all_messages) % 2 == 1):
-        #left
-        msg = (username +": " + command)
-    else:
-        #right
-        msg = (command + " :" + username)
+    msg = data['message']
+    username = data['name']
         
-    db.session.add(chatMessages(msg, data[1]['user_id']))
+    db.session.add(chatMessages(msg, username))
     db.session.commit()
     
     emit_all_messages(MESSAGE_RECEIVED_CHANNEL)
     
-    #Add Bot Response
-    bot_response = bot.command(command)
-    if(len(all_messages) % 2 == 1):
-        #left
-        res = ("BimboBOT: " + bot_response)
-    else:
-        #right
-        res = (bot_response + " :" + botID)
+    bot_response = bot.command(msg)
     
-    db.session.add(chatMessages(res, botID))
+    db.session.add(chatMessages(bot_response, botID))
     db.session.commit()
     
     emit_all_messages(MESSAGE_RECEIVED_CHANNEL)
-    print(bot_response)
     
 @socketio.on('connect')
 def on_connect():

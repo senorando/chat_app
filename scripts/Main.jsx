@@ -19,6 +19,7 @@ export function App() {
                 }
                 setName(data['name']);
             });
+            Socket.off('set user', '');
         });
     }
     getNewUser();
@@ -26,7 +27,7 @@ export function App() {
         <div>
             <Content user_info={ currUsr } />
             <p id="username"> Welcome! Your name is: <strong>{ currUsr } </strong></p>
-            <Users />
+            <Users user_info={ currUsr }/>
         </div>
         );
     }
