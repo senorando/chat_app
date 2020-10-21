@@ -34,8 +34,8 @@ db.app = app
 #-----------------------------------#
 class Users(db.Model):
     __table_args__ = {'extend_existing': True}
-    id = db.Column(db.String(50), primary_key=True)
-    name = db.Column(db.String(30))
+    id = db.Column(db.String(75), primary_key=True)
+    name = db.Column(db.String(50))
     messages = db.relationship('chatMessages', backref='users')
     
     def __init__(self, name, id):
@@ -43,31 +43,34 @@ class Users(db.Model):
         self.id = id
         
     def __repr__(self):
-        return '<Username: %s>' % self.name
+        return '<Username: %s\nEmail: %s>' % (self.name, self.id)
 class chatMessages(db.Model):
     __table_args__ = {'extend_existing': True}
     id = db.Column(db.Integer, primary_key=True)
     text = db.Column(db.Text)
-    user_id = db.Column(db.String(50), db.ForeignKey('users.id'))
-    name = db.Column(db.String(50))
+    user_id = db.Column(db.String(75), db.ForeignKey('users.id'))
+    name = db.Column(db.String(120))
     time = db.Column(db.String(50))
+    image = db.Column(db.String(150))
     
-    def __init__(self, text, name, time):
+    def __init__(self, text, name, time, user_id, image):
         self.text = text
         self.name = name
         self.time = time
+        self.user_id = user_id
+        self.image = image
         
     def __repr__(self):
-        return '<%s: %s \n%s>' % (self.name, self.text, self.time)
+        return '<%s: %s \n%s \n%s\n%s>' % (self.name, self.text, self.time, self.user_id, self.image)
 #-----------------------------------#
 db.create_all()
 db.session.commit()
 active_users = []
-numUsers = 0
 months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 #-----------------------------------#
 bot = bot.chatBot()
 botID = "BimboBOT"
+botImage = "https://www.internetandtechnologylaw.com/files/2019/06/iStock-872962368-chat-bots.jpg"
 print("\nChecking to see if BimboBOT exists...")
 if db.session.query(Users.id).filter_by(name = "BimboBOT").scalar() is None:
     print("Created DB Entry for BimboBOT!\n")
@@ -91,7 +94,9 @@ def emit_all_messages(channel):
         all_messages.append({ 
             'name': msg.name, 
             'text': msg.text, 
-            'time': msg.time
+            'time': msg.time,
+            'image': msg.image,
+            'email': msg.user_id
         })
     socketio.emit(channel, {
         'allMessages': all_messages
@@ -115,22 +120,15 @@ def on_new_message(data):
     print("\nGot a new message: " + data['message'] + 
         "\nFrom User: " + data['name']
         )
-    isURL = False
     msg = data['message']
     username = data['name']
+    image = data['imageUrl']
+    user_id = data['user_id']
     time = datetime.datetime.now()
     time_str = (months[time.month - 1] + " " + str(time.day) + " \n@" + time.strftime("%H:%M:%S"))
-    
-    if len(findUrl(msg)) == 1:
-        url = findUrl(msg)[0]
-        isURL = True
-        print(url)
-        db.session.add(chatMessages(msg, username, time_str))
-        db.session.commit()
-    else:
-        url = "none"
-        db.session.add(chatMessages(msg, username, time_str))
-        db.session.commit()
+
+    db.session.add(chatMessages(msg, username, time_str, user_id, image))
+    db.session.commit()
     
     emit_all_messages('message received')
     
@@ -141,10 +139,12 @@ def on_new_command(data):
         )
     msg = data['message']
     username = data['name']
+    image = data['imageUrl']
+    user_id = data['user_id']
     time = datetime.datetime.now()
     time_str = (months[time.month - 1] + " " + str(time.day) + " \n@" + time.strftime("%H:%M:%S"))
     
-    db.session.add(chatMessages(msg, username, time_str))
+    db.session.add(chatMessages(msg, username, time_str, user_id, image))
     db.session.commit()
     
     emit_all_messages(MESSAGE_RECEIVED_CHANNEL)
@@ -153,42 +153,61 @@ def on_new_command(data):
     time = datetime.datetime.now()
     time_str = (months[time.month - 1] + " " + str(time.day) + " \n@" + time.strftime("%H:%M:%S"))
     
-    db.session.add(chatMessages(bot_response, botID, time_str))
+    db.session.add(chatMessages(bot_response, botID, time_str, botID, botImage))
     db.session.commit()
 
     emit_all_messages(MESSAGE_RECEIVED_CHANNEL)
+
+@socketio.on('new google')
+def on_new_google(data):
+    googleUsr = {
+        'name': data['name'],
+        'email': data['email'],
+        'imgUrl': data['imgUrl'],
+        'sid': request.sid
+    }
+    print('\nNew Google User!' + 
+            '\n-->Name: ' + googleUsr['name'] +
+            '\n-->Email: ' + googleUsr['email'] +
+            '\n-->Image: ' + googleUsr['imgUrl']
+            )
     
+    active_users.append(googleUsr)
+    socketio.emit('set user', googleUsr)
+    socketio.emit('active users', {
+        'activeUsers': active_users,
+        'numUsers': len(active_users)
+    })
+    if db.session.query(Users.id).filter_by(id = googleUsr['email']).scalar() is None:
+        db.session.add(Users(name = googleUsr['name'], id = googleUsr['email']))
+        db.session.commit()
+        print("Created DB Entry for " + googleUsr['name'] + " with email " + googleUsr['email'])
+    else:
+        print("Welcome Back! " + googleUsr['name'])
+
+    emit_all_messages(MESSAGE_RECEIVED_CHANNEL)
+
 @socketio.on('connect')
 def on_connect():
-    user = genUserName()
-    print ('\nSomeone connected!' + '\nUsername: ' + user + '\nSID: ' + request.sid + "\n")
-    global numUsers
-    numUsers += 1
-    active_users.append(user)
-    socketio.emit('set user', {
-        'name': user,
-        'user_id': request.sid
-    })
+    print('\nSomeone Connected!')
+    
     socketio.emit('active users', {
         'activeUsers': active_users,
-        'numUsers': numUsers
+        'numUsers': len(active_users)
     })
-    db.session.add(Users(name = user, id = request.sid))
-    db.session.commit()
     emit_all_messages(MESSAGE_RECEIVED_CHANNEL)
-    emit_all_users(USER_RECEIVED_CHANNEL)
-    
+
 @socketio.on('disconnect')
 def on_disconnect():
-    active_users.remove(Users.query.filter_by(id = request.sid).first().name)
-    global numUsers 
-    numUsers -= 1
+    print ('\nSomeone disconnected!')
+    for user in active_users:
+        if user['sid'] == request.sid:
+            active_users.remove(user)
+            break
     socketio.emit('active users', {
         'activeUsers': active_users,
-        'numUsers': numUsers
-        
+        'numUsers': len(active_users)
     })
-    print ('\nSomeone disconnected!')
 
 @app.route('/')
 def index():

@@ -3,7 +3,11 @@ import React, { useState, useEffect } from 'react';
 import { Socket } from './Socket';
 
 export function Users(props) {
-    const currUsr = props.user_info
+    const currUsr = { 
+        'name': props.name,
+        'image': props.image,
+        'email': props.email
+    };
     const [users, setUsers] = useState([]);
     const [numUsers, updateNum] = useState();
     
@@ -30,16 +34,22 @@ export function Users(props) {
                 { head }
                 <ul id="user_list">
                     {users.map(( users, index ) => {
-                        if(currUsr == users)
+                        if(currUsr['email'] == users['email'])
                             return <li id="people"
                                     key={ index }
                                     index={ index }>
-                                    <i>You: { users }</i></li>;
+                                    <span id="active_list">
+                                        <img src={ users['imgUrl'] } />
+                                    </span>
+                                    <i>{ users['name'] }</i></li>;
                         else
                             return <li id="people"
                                     key={ index }
                                     index={ index }>
-                                    { users }</li>;})
+                                    <span id="active_list">
+                                        <img src={ users['imgUrl'] } />
+                                    </span>
+                                    { users['name'] }</li>;})
                     }
                 </ul>
             </div>

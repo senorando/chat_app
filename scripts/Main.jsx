@@ -7,15 +7,28 @@ import { Users } from './Users';
 import { Socket } from './Socket';
 
 export function App() {
-    const [currUsr, setUsr] = useState();
+    const [userName, setName] = useState();
+    const [currUsr, setUsr] = useState({ name: '', email: '', image: '', sid: '' });
+    const name = currUsr.name;
+    const email = currUsr.email;
+    const image = currUsr.image;
+    const sid = currUsr.sid;
     
     function getNewUser() {
         useEffect(() => {
             Socket.on('set user', (data) => {
-                if(data['user_id'] == Socket.id){
-                    console.log("New User: " + data['name'] + "\nSID: " + Socket.id);
-                    setUsr(data['name']);
+                if(data['sid'] == Socket.id){
+                    console.log("Welcome: " + data['name'] + "\nEmail: " + data['email'] + "\nImage/: " + data['imgUrl']);
+                    setUsr(prevState => {
+                        return { 
+                            name: data['name'], 
+                            email: data['email'], 
+                            image: data['imgUrl'], 
+                            sid: data['sid'] 
+                        };
+                    });
                 }
+                setName(data['name']);
             });
             Socket.off('set user', '');
         });
@@ -23,9 +36,15 @@ export function App() {
     getNewUser();
     return (
         <div>
-            <Content user_info={ currUsr } />
-            <p id="username"> Welcome! Your name is: <strong>{ currUsr } </strong></p>
-            <Users user_info={ currUsr }/>
+            <Content name={ name } 
+                email={ email } 
+                image={ image } 
+                sid={ sid }/>
+            <p id="username"> Welcome! <strong>{ name } </strong></p>
+            <Users name={ name } 
+                email={ email } 
+                image={ image } 
+                sid={ sid }/>
         </div>
         );
     }

@@ -8,8 +8,9 @@ export function Text_Box(props) {
         let in_message = document.getElementById("msg");
         let data = {
             message: in_message.value,
-            user_id: Socket.id,
-            name: props.name
+            user_id: props.email,
+            name: props.name,
+            imageUrl: props.image
         };
         console.log(data);
         if( data.message[0] == '!' && data.message[1] == '!'){

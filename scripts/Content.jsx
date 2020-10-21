@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
 import { Main } from './Main';
+
+import { Login } from './GoogleButton';
 import { Text_Box } from './Text_Box';
 import { Chatbox } from './Chat';
 import { Socket } from './Socket';
@@ -24,8 +26,15 @@ export function Content(props) {
     return (
         <div>
             <h1 id="title">Not Discord</h1>
-            <Chatbox name = { props.user_info } chatLog={ chatLog } />
-            <Text_Box name={ props.user_info } />
+            <Login />
+            <Chatbox name={ props.name } 
+                email={ props.email } 
+                image={ props.image } 
+                sid={ props.sid } 
+                chatLog={ chatLog } />
+            <Text_Box name={ props.name } 
+                email={ props.email }
+                image={ props.image } />
         </div>
     );
 }
