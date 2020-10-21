@@ -8,13 +8,16 @@
     -SLQ Alchemy
     -python-dotenv
 ### Setup
-0. Install your stuff!
+0. Requirements!
   a) `npm install`    
   b) `pip install flask-socketio`    
   c) `pip install eventlet`    
   d) `npm install -g webpack`    
   e) `npm install --save-dev webpack`    
-  f) `npm install socket.io-client --save`    
+  f) `npm install socket.io-client --save`
+  g) `npm install react-scroll`
+  h) `npm install react-google-login`
+  i) `npm install react-linkify`
 If you see any error messages, make sure you use `sudo pip` or `sudo npm`. If it says "pip cannot be found", run `which pip` and use `sudo [path to pip from which pip] install`  
   
 # Getting PSQL to work with Python  
