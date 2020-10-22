@@ -33,7 +33,6 @@ db.init_app(app)
 db.app = app
 #-----------------------------------#
 class Users(db.Model):
-    __table_args__ = {'extend_existing': True}
     id = db.Column(db.String(75), primary_key=True)
     name = db.Column(db.String(50))
     messages = db.relationship('chatMessages', backref='users')
@@ -45,7 +44,6 @@ class Users(db.Model):
     def __repr__(self):
         return '<Username: %s\nEmail: %s>' % (self.name, self.id)
 class chatMessages(db.Model):
-    __table_args__ = {'extend_existing': True}
     id = db.Column(db.Integer, primary_key=True)
     text = db.Column(db.Text)
     user_id = db.Column(db.String(75), db.ForeignKey('users.id'))
