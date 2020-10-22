@@ -16,7 +16,7 @@
   e) `npm install --save-dev webpack`    
   f) `npm install socket.io-client --save`    
   g) `npm install react-scroll`    
-  h) `npm install react-google-login``    
+  h) `npm install react-google-login`    
   i) `npm install react-linkify`
 If you see any error messages, make sure you use `sudo pip` or `sudo npm`. If it says "pip cannot be found", run `which pip` and use `sudo [path to pip from which pip] install`  
   
