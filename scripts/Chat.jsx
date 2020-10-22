@@ -20,19 +20,18 @@ export function Chatbox(props) {
             className="chat">
             <ul id="msg_list">
                 {msgs.map(( msgs, index) => {
-                        if(msgs.name == props.name)
+                        if(msgs.email == props.email)
                             return <li id="self" key={index}>
-                                    <img src={ msgs.image }/><br/><strong>You</strong><br/>
-                                    <span id="people">
+                                    <span id="msgs">
                                     <Linkify>{ msgs.text }</Linkify>
                                     </span><br/>
-                                    <span id="time">{ msgs.time }</span>
+                                    <span id="time">{ msgs.time }</span><br/>
                                     </li>;
                         else
                             return <li id={ msgs.name.valueOf() == 'BimboBOT'? 'chat_bot' : 'others' } key={index}>
-                            <span id="people"><img src={ msgs.image } /><br/><strong>{ msgs.name }:</strong><br/>
+                            <span id="msgs"><img src={ msgs.image } /><br/><strong>{ msgs.name }: </strong>
                                 <Linkify>{ msgs.text }</Linkify></span><br/>
-                            <span id="time">{ msgs.time }</span>
+                            <span id="time">{ msgs.time }</span><br/>
                             </li>})
                 }
             </ul>

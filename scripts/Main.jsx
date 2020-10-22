@@ -15,6 +15,8 @@ export function App() {
     const sid = currUsr.sid;
     const [isLoggedIn, setStatus] = useState(false);    //
     
+    Socket.emit('connect');
+    
     function getNewUser() {
         useEffect(() => {
             Socket.on('set user', (data) => {

@@ -64,6 +64,7 @@ class chatMessages(db.Model):
 db.create_all()
 db.session.commit()
 active_users = []
+numUsers = 0;
 months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 #-----------------------------------#
 bot = bot.chatBot()
@@ -71,10 +72,11 @@ botID = "BimboBOT"
 botImage = "https://www.internetandtechnologylaw.com/files/2019/06/iStock-872962368-chat-bots.jpg"
 botDet = {
     'name': 'BimboBOT',
-    'email': 'none :(',
+    'email': ' ',
     'imgUrl': botImage,
     'sid': botID
 }
+numUsers += 1
 active_users.append(botDet)
 
 print("\nChecking to see if BimboBOT exists...")
@@ -85,14 +87,6 @@ if db.session.query(Users.id).filter_by(name = "BimboBOT").scalar() is None:
 else:
     print("DB Entry for BimboBOT Exists!\n")
 #-----------------------------------#
-def emit_all_users(channel):
-    all_users = [ \
-        db_message.name for db_message \
-        in db.session.query(Users).all()]
-        
-    socketio.emit(channel, {
-        'allUsers': all_users
-    })
 def emit_all_messages(channel):
     global all_messages
     all_messages = []
@@ -130,8 +124,9 @@ def on_new_message(data):
     username = data['name']
     image = data['imageUrl']
     user_id = data['user_id']
-    time = datetime.datetime.now()
-    time_str = (months[time.month - 1] + " " + str(time.day) + " \n@" + time.strftime("%H:%M:%S"))
+    date = datetime.datetime.now()
+    time = str(datetime.datetime.now(pytz.timezone('US/Eastern')).strftime("%H:%M")) #NYC time
+    time_str = (months[date.month - 1] + " " + str(date.day) + " \n@" + time)
 
     db.session.add(chatMessages(msg, username, time_str, user_id, image))
     db.session.commit()
@@ -157,8 +152,9 @@ def on_new_command(data):
     emit_all_messages(MESSAGE_RECEIVED_CHANNEL)
     
     bot_response = bot.command(msg)
-    time = datetime.datetime.now()
-    time_str = (months[time.month - 1] + " " + str(time.day) + " \n@" + time.strftime("%H:%M:%S"))
+    date = datetime.datetime.now()
+    time = str(datetime.datetime.now(pytz.timezone('US/Eastern')).strftime("%H:%M")) #NYC time
+    time_str = (months[date.month - 1] + " " + str(date.day) + " \n@" + time)
     
     db.session.add(chatMessages(bot_response, botID, time_str, botID, botImage))
     db.session.commit()
@@ -173,17 +169,21 @@ def on_new_google(data):
         'imgUrl': data['imgUrl'],
         'sid': request.sid
     }
+    global numUsers 
+    numUsers += 1
     print('\nNew Google User!' + 
             '\n-->Name: ' + googleUsr['name'] +
             '\n-->Email: ' + googleUsr['email'] +
-            '\n-->Image: ' + googleUsr['imgUrl']
+            '\n-->Image: ' + googleUsr['imgUrl'] +
+            '\nActive Users: ' + str(numUsers)
             )
     
     active_users.append(googleUsr)
+    
     socketio.emit('set user', googleUsr)
     socketio.emit('active users', {
         'activeUsers': active_users,
-        'numUsers': len(active_users)
+        'numUsers': numUsers
     })
     if db.session.query(Users.id).filter_by(id = googleUsr['email']).scalar() is None:
         db.session.add(Users(name = googleUsr['name'], id = googleUsr['email']))
@@ -196,21 +196,23 @@ def on_new_google(data):
 
 @socketio.on('connect')
 def on_connect():
-    print('\nSomeone Connected!')
-    
+    global numUsers
+    print('\nSomeone Connected!\nActive Users: ' + str(numUsers))
     socketio.emit('active users', {
         'activeUsers': active_users,
-        'numUsers': len(active_users)
+        'numUsers': numUsers
     })
     emit_all_messages(MESSAGE_RECEIVED_CHANNEL)
 
 @socketio.on('disconnect')
 def on_disconnect():
-    print ('\nSomeone disconnected!')
+    global numUsers
     for user in active_users:
         if user['sid'] == request.sid:
             active_users.remove(user)
+            numUsers -= 1
             break
+    print ('\nSomeone disconnected!\nActive Users: ' + str(numUsers))
     socketio.emit('active users', {
         'activeUsers': active_users,
         'numUsers': len(active_users)
@@ -218,7 +220,9 @@ def on_disconnect():
 
 @app.route('/')
 def index():
-    emit_all_users('connect')
+    socketio.emit('active users', {
+        'activeUsers': active_users
+    })
     emit_all_messages(NEW_MESSAGE_CHANNEL)
     return flask.render_template('index.html')
     

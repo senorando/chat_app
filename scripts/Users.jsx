@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Linkify from 'react-linkify';
 
 import { Socket } from './Socket';
 
@@ -9,47 +10,43 @@ export function Users(props) {
         'email': props.email
     };
     const [users, setUsers] = useState([]);
-    const [numUsers, updateNum] = useState();
+    const [numUsers, setNum] = useState(0);
     
     function getUsers() {
         useEffect(() => {
             Socket.on('active users', (data) => {
                 setUsers(data['activeUsers']);
-                updateNum(data['numUsers']);
+                setNum(data['numUsers']);
+                console.log(data['numUsers'] + " Active Users");
                 });
             Socket.off('active users', '');
         });
     }
     getUsers();
-    function usersOn() {
-        if(numUsers % 2 == 1) {
-            return <h4 id="actives">1 Online User</h4>;
-        }else{
-            return <h4 id="actives"><strong>{ numUsers }</strong> Online Users</h4>;
-        }
-    }
-    let head = usersOn();
     return (
             <div className="active_user">
-                { head }
+                
                 <ul id="user_list">
+                    <li><h4 id="actives"><strong>{ numUsers }</strong> Online Users</h4></li>
                     {users.map(( users, index ) => {
-                        if(currUsr['email'] == users['email'])
-                            return <li id="people"
+                        if(currUsr['email'] == users['email'] && currUsr['email'] != "")
+                            return <li id="users"
                                     key={ index }
                                     index={ index }>
-                                    <span id="active_list">
-                                        <img src={ users['imgUrl'] } />
+                                    <span id="names_me">
+                                    <img id="active_img" src={ users['imgUrl'] } />
+                                    <i>{ users['name'] }<br/><Linkify id="emails">{ users['email'] }</Linkify></i>
                                     </span>
-                                    <i>{ users['name'] }</i></li>;
+                                    </li>;
                         else
-                            return <li id="people"
+                            return <li id="users"
                                     key={ index }
                                     index={ index }>
-                                    <span id="active_list">
-                                        <img src={ users['imgUrl'] } />
+                                    <span id="names">
+                                    <img id="active_img" src={ users['imgUrl'] } />
+                                    { users['name'] }<br/><Linkify id="emails">{ users['email'] }</Linkify>
                                     </span>
-                                    { users['name'] }</li>;})
+                                    </li>;})
                     }
                 </ul>
             </div>

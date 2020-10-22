@@ -14,7 +14,13 @@ form{
     text-align:center;
 }
 h4 {
+    display: inline;
     text-align: center;
+    font-size: 16px;
+    border: #ff5151 solid;
+    padding: 0 5 0 5;
+    background-color: #ff7373;
+    width: fit-content;
 }
 #GoogleButton {
     display: inline;
@@ -29,6 +35,9 @@ button{
     justify-content: center;
     padding: 15px 20px;
 }
+#emails {
+    font-size: 12px
+}
 input{
     border-style: solid;
     border-radius: 5px;
@@ -40,27 +49,28 @@ input{
 }
 #others{
     text-align: left;
-    border: #0a00ff;
-    background-color: #e5e4ff;
-    border-style: none none none solid;
-    border-radius: 5px;
+    width: fit-content;
+    background-color: #2b24ff;
+    color: white;
+    border-style: black solid;
+    border-radius: 25px;
     padding: 15px 4px;
     margin: 10px 0;
 }
 #self{
     text-align: right;
-    
     border: #ffffff;
-    background-color: #f1f1f1;
+    background-color: #ffffff;
     border-style: none solid none none;
-    border-radius: 5px;
+    border-radius: 25px;
     padding: 15px 4px;
     margin: 10px 0;
 }
 #chat_bot{
-    border: black dotted;
-    background-color: gray;
-    border-radius: 5px;
+    border: white;
+    border-style: groove;
+    background-color: #823232;
+    border-radius: 25px;
     padding: 15px 4px;
     margin: 10px 0;
     color: white;
@@ -84,7 +94,7 @@ h1 {
     margin-left: 50;
 }
 #msg_list{
-    background-color: #e2e2e2;
+    background-color: #fffeeabd;
     color: black;
     height: 500px;
     border-style: solid;
@@ -97,22 +107,45 @@ ul {
     list-style-type: none;
     margin-right: 50px;
 }
-.active_user {
+#user_list {
     color: black;
     width: 20%;
     height: 500px;
     border-style: solid;
     border-radius: 5px;
-    background-color: #e2e2e2;
+    background-color: #fffeeabd;
     list-style-type: none;
     padding: 5px 2px 5px 2px;
+    margin-top: 10px;
     margin-left: 200px;
     margin-right: 5;
     overflow-y: auto;
     float: left;
+    font-size: 14px;
+
 }
-#people {
-    border: black;
+#names {
+    text-align: left;
+    float: right;
+    border: #000000;
+    width: 95%;
+    background-color: #ffffff;
+    border-style: none none none solid;
+    border-radius: 25px;
+    padding: 15px 4px;
+    margin: 10px 0;   
+}
+#names_me {
+    text-align: left;
+    float: right;
+    border: #ff5151;
+    width: 95%;
+    background-color: #ff7373;
+    border-style: groove;
+    border-radius: 25px;
+    padding: 15px 4px;
+    margin: 10px 0;
+    
 }
 #login {
     margin-left: 200;
