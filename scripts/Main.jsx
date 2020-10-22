@@ -13,6 +13,7 @@ export function App() {
     const email = currUsr.email;
     const image = currUsr.image;
     const sid = currUsr.sid;
+    const [isLoggedIn, setStatus] = useState(false);    //
     
     function getNewUser() {
         useEffect(() => {
@@ -27,6 +28,7 @@ export function App() {
                             sid: data['sid'] 
                         };
                     });
+                    setStatus(prevStatus => true);      //
                 }
                 setName(data['name']);
             });
@@ -36,15 +38,17 @@ export function App() {
     getNewUser();
     return (
         <div>
-            <Content name={ name } 
-                email={ email } 
-                image={ image } 
-                sid={ sid }/>
-            <p id="username"> Welcome! <strong>{ name } </strong></p>
+            <h1 id="title">Not Discord</h1>
+            <p id="welcome"> Welcome! <strong>{ name } </strong></p>
             <Users name={ name } 
                 email={ email } 
                 image={ image } 
                 sid={ sid }/>
+            <Content name={ name } 
+                email={ email } 
+                image={ image } 
+                sid={ sid }
+                isLoggedIn={ isLoggedIn }/>
         </div>
         );
     }

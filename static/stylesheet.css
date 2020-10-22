@@ -16,6 +16,9 @@ form{
 h4 {
     text-align: center;
 }
+#GoogleButton {
+    display: inline;
+}
 button{
     display: inline;
     background-color: #e2e2e2;
@@ -30,10 +33,10 @@ input{
     border-style: solid;
     border-radius: 5px;
     display: inline;
-    margin-right: 5px;
+    margin-left: 5px;
     padding: 15px 1.25em;
     font-size: 12px;
-    width: 60%;
+    width: 40%;
 }
 #others{
     text-align: left;
@@ -46,6 +49,7 @@ input{
 }
 #self{
     text-align: right;
+    
     border: #ffffff;
     background-color: #f1f1f1;
     border-style: none solid none none;
@@ -71,20 +75,21 @@ h1 {
     color: white;
 }
 
-#username {
+#welcome {
     font-size: 30px;
     margin: 10px auto;
     width: 70%;
 }
+#logs{
+    margin-left: 50;
+}
 #msg_list{
-    text-align: left;
     background-color: #e2e2e2;
     color: black;
     height: 500px;
-    margin: 10px auto;
     border-style: solid;
     border-radius: 5px;
-    width: 70%;
+    width: 60%;
     padding: 5px 2px 5px 2px;
     overflow-y: auto;
 }
@@ -95,14 +100,25 @@ ul {
 .active_user {
     color: black;
     width: 20%;
-    height: 200px;
+    height: 500px;
     border-style: solid;
     border-radius: 5px;
     background-color: #e2e2e2;
     list-style-type: none;
     padding: 5px 2px 5px 2px;
-    margin: auto;
+    margin-left: 200px;
+    margin-right: 5;
+    overflow-y: auto;
+    float: left;
 }
-#user_list {
-    margin: 0px;
+#people {
+    border: black;
+}
+#login {
+    margin-left: 200;
+    border: black solid;
+    color: black;
+    width: fit-content;
+    background-color: #e2e2e2;
+    padding: 5 10 5 10;
 }

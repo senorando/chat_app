@@ -23,7 +23,7 @@ export function Users(props) {
     getUsers();
     function usersOn() {
         if(numUsers % 2 == 1) {
-            return <h4 id="actives">You're the only user online :(</h4>;
+            return <h4 id="actives">1 Online User</h4>;
         }else{
             return <h4 id="actives"><strong>{ numUsers }</strong> Online Users</h4>;
         }

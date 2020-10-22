@@ -1,6 +1,6 @@
 from os.path import join, dirname
 from dotenv import load_dotenv
-import os, flask, flask_sqlalchemy, flask_socketio, random, datetime, re
+import os, flask, flask_sqlalchemy, flask_socketio, random, datetime, pytz, re
 from flask import session, redirect, url_for, request
 from markupsafe import escape
 from sqlalchemy.orm import relationship
@@ -71,6 +71,14 @@ months = ["January", "February", "March", "April", "May", "June", "July", "Augus
 bot = bot.chatBot()
 botID = "BimboBOT"
 botImage = "https://www.internetandtechnologylaw.com/files/2019/06/iStock-872962368-chat-bots.jpg"
+botDet = {
+    'name': 'BimboBOT',
+    'email': 'none :(',
+    'imgUrl': botImage,
+    'sid': botID
+}
+active_users.append(botDet)
+
 print("\nChecking to see if BimboBOT exists...")
 if db.session.query(Users.id).filter_by(name = "BimboBOT").scalar() is None:
     print("Created DB Entry for BimboBOT!\n")
@@ -141,8 +149,9 @@ def on_new_command(data):
     username = data['name']
     image = data['imageUrl']
     user_id = data['user_id']
-    time = datetime.datetime.now()
-    time_str = (months[time.month - 1] + " " + str(time.day) + " \n@" + time.strftime("%H:%M:%S"))
+    date = datetime.datetime.now()
+    time = str(datetime.datetime.now(pytz.timezone('US/Eastern')).strftime("%H:%M")) #NYC time
+    time_str = (months[date.month - 1] + " " + str(date.day) + " \n@" + time)
     
     db.session.add(chatMessages(msg, username, time_str, user_id, image))
     db.session.commit()

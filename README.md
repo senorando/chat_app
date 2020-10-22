@@ -67,5 +67,5 @@ If that doesn't work: `sudo vim $(psql -c "show hba_file;" | grep pg_hba.conf)`
     -Users Remain in DB after logout
     
 ### Features To Add
-    -Alternating colored chatboxes
-    -Allow the user to login (Google OAuth)
+    -More Login Methods
+    -Hyperlink usernames

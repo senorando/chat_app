@@ -9,6 +9,7 @@ import { Socket } from './Socket';
 
 export function Content(props) {
     const [chatLog, updateChat] = useState([]);
+    const isLoggedIn = props.isLoggedIn;
     
     function nextLine() {
         useEffect(() => {
@@ -25,16 +26,21 @@ export function Content(props) {
     
     return (
         <div>
-            <h1 id="title">Not Discord</h1>
-            <Login />
             <Chatbox name={ props.name } 
                 email={ props.email } 
                 image={ props.image } 
                 sid={ props.sid } 
-                chatLog={ chatLog } />
-            <Text_Box name={ props.name } 
+                chatLog={ chatLog } 
+                 />
+            <br/>
+            { isLoggedIn? 
+                <Text_Box name={ props.name } 
                 email={ props.email }
-                image={ props.image } />
+                image={ props.image }
+                />
+                : 
+                <div id="Login">Please login to Google!<Login /></div>
+            }
         </div>
     );
 }
