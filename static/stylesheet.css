@@ -60,7 +60,7 @@ input{
     margin: 10px 0;
 }
 #others a{
-    color: #e4e4e4;
+    color: #ffea87;
     text-decoration: none;
     font-style: italic;
 }
@@ -179,6 +179,9 @@ ul {
     border-radius: 25px;
     padding: 15px 4px;
     margin: 10px 0;   
+}
+#names_others a {
+    color: #001993;
 }
 #names_others img{
     border-radius: 50%;
