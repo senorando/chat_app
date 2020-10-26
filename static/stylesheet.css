@@ -33,7 +33,7 @@ input{
     height: 50px;
     float: left;
 }
-button{
+.send {
     display: inline;
     background-color: #cecece;
     color: black;
