@@ -88,6 +88,7 @@ else:
     print("DB Entry for BimboBOT Exists!\n")
 #-----------------------------------#
 def emit_all_messages(channel):
+    global all_messages
     all_messages = []
     for msg in db.session.query(chatMessages).all():
         all_messages.append({ 
