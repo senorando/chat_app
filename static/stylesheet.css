@@ -19,6 +19,9 @@ h4 {
     background-color: #ff7373;
     width: fit-content;
 }
+#GoogleButton {
+    display: inline;
+}
 input{
     border-style: solid;
     border-radius: 5px;
@@ -34,15 +37,14 @@ button{
     display: inline;
     background-color: #cecece;
     color: black;
-    font-weight: bold;
     border-radius: 8px;
-    box-shadow: 0 3px 5px rgb(0 0 0);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
     align-items: center;
     justify-content: center;
     height: 50px;
     width: 5%;
+    font-weight: bold;
     float: left;
-    font-size: 14px;
 }
 #emails {
     font-size: 12px
@@ -205,8 +207,7 @@ ul {
 }
 #prof_pic {
     float:left;
-}
-#GoogleLogin {
+}#GoogleLogin {
     display: inline;
     float: left;
 }
