@@ -4,11 +4,8 @@ body {
     background-image: url('background.jpg');
     color: white;
 }
-img {
-    border-radius: 50%;
-    height: 40px;
-    width: 40px;
-    padding: 0 5 0 5;
+#sent_img{
+    height: 500px;
 }
 form{
     text-align:center;
@@ -22,30 +19,33 @@ h4 {
     background-color: #ff7373;
     width: fit-content;
 }
-#GoogleButton {
-    display: inline;
-}
-button{
-    display: inline;
-    background-color: #e2e2e2;
-    color: black;
-    border-radius: 8px;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
-    align-items: center;
-    justify-content: center;
-    padding: 15px 20px;
-}
-#emails {
-    font-size: 12px
-}
 input{
     border-style: solid;
     border-radius: 5px;
-    display: inline;
-    margin-left: 5px;
+    margin-top: 0px;
+    margin-right: auto;
     padding: 15px 1.25em;
     font-size: 12px;
-    width: 40%;
+    width: 58%;
+    height: 50px;
+    float: left;
+}
+button{
+    display: inline;
+    background-color: #cecece;
+    color: black;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0 3px 5px rgb(0 0 0);
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 5%;
+    float: left;
+    font-size: 14px;
+}
+#emails {
+    font-size: 12px
 }
 #others{
     text-align: left;
@@ -57,23 +57,41 @@ input{
     padding: 15px 4px;
     margin: 10px 0;
 }
+#others a{
+    color: #e4e4e4;
+    text-decoration: none;
+    font-style: italic;
+}
 #self{
     text-align: right;
+    width:fit-content;
     border: #ffffff;
     background-color: #ffffff;
     border-style: none solid none none;
     border-radius: 25px;
     padding: 15px 4px;
     margin: 10px 0;
+    margin-left: auto;
+}
+#self a {
+    color: #0200ba;
+    text-decoration: none;
+    font-style: italic;
 }
 #chat_bot{
     border: white;
+    width: fit-content;
     border-style: groove;
     background-color: #823232;
     border-radius: 25px;
     padding: 15px 4px;
     margin: 10px 0;
     color: white;
+    font-style: italic;
+}
+#chat_bot a{
+    color: #e4e4e4;
+    text-decoration: none;
     font-style: italic;
 }
 #time {
@@ -94,14 +112,21 @@ h1 {
     margin-left: 50;
 }
 #msg_list{
-    background-color: #fffeeabd;
+    background-color: #ffffff80;
     color: black;
-    height: 500px;
+    height: 550px;
     border-style: solid;
     border-radius: 5px;
-    width: 60%;
+    width: 65%;
     padding: 5px 2px 5px 2px;
+    margin-bottom: 0px;
     overflow-y: auto;
+}
+.prof_pic{
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    padding: 0 5 0 5;
 }
 ul {
     list-style-type: none;
@@ -109,11 +134,11 @@ ul {
 }
 #user_list {
     color: black;
-    width: 20%;
-    height: 500px;
+    width: 15%;
+    height: 650px;
     border-style: solid;
     border-radius: 5px;
-    background-color: #fffeeabd;
+    background-color: #fffb9bab;
     list-style-type: none;
     padding: 5px 2px 5px 2px;
     margin-top: 10px;
@@ -124,7 +149,25 @@ ul {
     font-size: 14px;
 
 }
-#names {
+#names_bot {
+    text-align: left;
+    float: right;
+    border: #000000;
+    width: 95%;
+    background-color: #ffffff;
+    border-style: none none none solid;
+    border-radius: 25px;
+    padding: 15px 4px;
+    margin: 10px 0;
+    font-weight: bold;
+}
+#names_bot img{
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    padding: 0 5 0 5;
+}
+#names_others {
     text-align: left;
     float: right;
     border: #000000;
@@ -135,19 +178,39 @@ ul {
     padding: 15px 4px;
     margin: 10px 0;   
 }
+#names_others img{
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    padding: 0 5 0 5;
+}
 #names_me {
     text-align: left;
     float: right;
-    border: #ff5151;
-    width: 95%;
+    border: #ff5151 solid;
+    width: 94%;
     background-color: #ff7373;
-    border-style: groove;
     border-radius: 25px;
     padding: 15px 4px;
     margin: 10px 0;
-    
 }
-#login {
+#names_me a{
+    color: #001993;
+}
+#names_me img{
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    padding: 0 5 0 5;
+}
+#prof_pic {
+    float:left;
+}
+#GoogleLogin {
+    display: inline;
+    float: left;
+}
+#GoogleLogout {
     margin-left: 200;
     border: black solid;
     color: black;

@@ -14,7 +14,6 @@ export function Content(props) {
     function nextLine() {
         useEffect(() => {
             Socket.on('message received', (data) => {
-                console.log("Received messages from server...\n" + data['allMessages']);
                 updateChat(data['allMessages']);
             });
             return (() => {
@@ -23,24 +22,22 @@ export function Content(props) {
         });
     }
     nextLine();
-    
+    const Chatbox_el = (<Chatbox name = { props.name }
+                            email = { props.email }
+                            image = { props.image }
+                            sid = { props.sid }
+                            chatLog = { chatLog }/>);
+    const GoogleButton = isLoggedIn? 
+        <Text_Box name={ props.name } 
+            email={ props.email }
+            image={ props.image } />
+            : 
+        <Login />;                            
     return (
         <div>
-            <Chatbox name={ props.name } 
-                email={ props.email } 
-                image={ props.image } 
-                sid={ props.sid } 
-                chatLog={ chatLog } 
-                 />
+            { Chatbox_el }
             <br/>
-            { isLoggedIn? 
-                <Text_Box name={ props.name } 
-                email={ props.email }
-                image={ props.image }
-                />
-                : 
-                <div id="Login">Please login to Google!<Login /></div>
-            }
+            { GoogleButton }
         </div>
     );
 }

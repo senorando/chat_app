@@ -1,13 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { GoogleLogin } from 'react-google-login';
+import { GoogleLogin, GoogleLogout } from 'react-google-login';
 
 import { Socket } from './Socket';
 
 const clientId = "665762907278-4khe1gncrp9k6j23jfgej1l6i17s61k7.apps.googleusercontent.com";
 
 export function Login(){
-    
     const onSuccess = (res) => {
         let data = {
             'name': res.profileObj.name,
@@ -15,13 +14,13 @@ export function Login(){
             'imgUrl': res.profileObj.imageUrl
         };
         console.log('|Login Success| currentUser: ', data)
-                    Socket.emit('new google', (data));
+        Socket.emit('new google', (data));
     };
     const onFailure = (res) => {
         console.log('|Login Failed| res:', res);
     };
     return (
-        <div id="GoogleButton">
+        <div id="GoogleLogin">
             <GoogleLogin
                 clientId = { clientId }
                 buttonText = "Login"
@@ -31,4 +30,18 @@ export function Login(){
                 />
         </div>
         );
+}
+export function Logout() {
+    const onSuccess = () => {
+        alert('Successfully Logged Out!');
+    };
+    return (
+        <div id="GoogleLogout">
+            <GoogleLogout 
+                clientId = { clientId }
+                buttonText = "Logout"
+                onLogoutSuccess = { onSuccess }
+            />
+        </div>
+    )
 }

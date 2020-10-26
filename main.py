@@ -64,7 +64,7 @@ class chatMessages(db.Model):
 db.create_all()
 db.session.commit()
 active_users = []
-numUsers = 0;
+numUsers = 0
 months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 #-----------------------------------#
 bot = bot.chatBot()
@@ -109,9 +109,9 @@ def genUserName():
     rand_n2 = random.randint(0, len(guest_n2) - 1)
     full_name = (guest_n1[rand_n1] + "_" + guest_n2[rand_n2])
     
-    return full_name;
+    return full_name
 def findUrl(string):
-    regex = r"(?i)\b((?:https?://|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'\".,<>?«»“”‘’]))"
+    regex = "(?i)\b((?:https?://|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'\".,<>?«»“”‘’]))"
     url = re.findall(regex,string)       
     return [x[0] for x in url]
 #-----------------------------------#
@@ -221,7 +221,8 @@ def on_disconnect():
 @app.route('/')
 def index():
     socketio.emit('active users', {
-        'activeUsers': active_users
+        'activeUsers': active_users,
+        'numUsers': numUsers
     })
     emit_all_messages(NEW_MESSAGE_CHANNEL)
     return flask.render_template('index.html')

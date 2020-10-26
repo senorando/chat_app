@@ -1,4 +1,4 @@
-# Milestone 2 for Project 2
+# Milestone 3 for Project 2
 
 #### To use this repository you must install the following APIs/Frameworks
     -Flask
@@ -64,7 +64,7 @@ If that doesn't work: `sudo vim $(psql -c "show hba_file;" | grep pg_hba.conf)`
   c) Preview Running Application (might have to clear your cache by doing a hard refresh)    
 
 ### Known Bugs
-    -Users Remain in DB after logout
+    -Occasionally messages and active users don't render until login
     
 ### Features To Add
     -More Login Methods

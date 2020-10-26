@@ -23,6 +23,25 @@ export function Users(props) {
         });
     }
     getUsers();
+    const Current_User_el = <span id="names_me">
+                                <div id="prof_pic"><img src={ users['imgUrl'] } /></div>
+                                <div id="actives">
+                                    <i>{ users['name'] }<br/>
+                                        <Linkify id="emails">{ users['email'] }</Linkify>
+                                    </i>
+                                </div>
+                            </span>;
+    const Other_User_el = <span id="names_others">
+                            <div id="prof_pic">
+                                <img id="prof_pic" src={ users['imgUrl'] } />
+                            </div>
+                            <div id="actives">
+                                { users['name'] }<br/>
+                                <Linkify id="emails">
+                                    { users['email'] }
+                                </Linkify>
+                            </div>
+                           </span>
     return (
             <div className="active_user">
                 
@@ -33,19 +52,30 @@ export function Users(props) {
                             return <li id="users"
                                     key={ index }
                                     index={ index }>
-                                    <span id="names_me">
-                                    <img id="active_img" src={ users['imgUrl'] } />
-                                    <i>{ users['name'] }<br/><Linkify id="emails">{ users['email'] }</Linkify></i>
-                                    </span>
+                                        <span id="names_me">
+                                            <div id="prof_pic"><img src={ users['imgUrl'] } /></div>
+                                            <div id="actives">
+                                                <i>{ users['name'] }<br/>
+                                                <Linkify id="emails">{ users['email'] }</Linkify>
+                                                </i>
+                                            </div>
+                                        </span>
                                     </li>;
                         else
-                            return <li id="users"
+                            return <li id={ users['email'] == " "? "bot" : "users"}
                                     key={ index }
                                     index={ index }>
-                                    <span id="names">
-                                    <img id="active_img" src={ users['imgUrl'] } />
-                                    { users['name'] }<br/><Linkify id="emails">{ users['email'] }</Linkify>
-                                    </span>
+                                        <span id={ users['email'] == " "? "names_bot" : "names_others"}>
+                                            <div id="prof_pic">
+                                                <img id="prof_pic" src={ users['imgUrl'] } />
+                                            </div>
+                                            <div id="actives">
+                                                { users['name'] }<br/>
+                                                <Linkify id="emails">
+                                                    { users['email'] }
+                                                </Linkify>
+                                            </div>
+                                        </span>
                                     </li>;})
                     }
                 </ul>

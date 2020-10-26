@@ -7,13 +7,16 @@ import { Socket } from './Socket';
 export function Chatbox(props) {
     
     const msgs = props.chatLog;
-    
-    console.log("msgs: " + props.chatLog);
+
     function scroll() {
         animateScroll.scrollToBottom({
         containerId: "msg_list"
         });
     }
+    function checkPIC(url) {
+        return(url.toLowerCase().match(/\.(jpeg|jpg|gif|png)$/) != null);
+    }
+
     useEffect(() => { scroll(); });
     return (
         <div id="logs"
@@ -23,14 +26,20 @@ export function Chatbox(props) {
                         if(msgs.email == props.email)
                             return <li id="self" key={index}>
                                     <span id="msgs">
-                                    <Linkify>{ msgs.text }</Linkify>
+                                    {checkPIC(msgs.text)? 
+                                        <img id="sent_img" src={msgs.text} />
+                                        :
+                                        <Linkify>{ msgs.text }</Linkify>}
                                     </span><br/>
                                     <span id="time">{ msgs.time }</span><br/>
                                     </li>;
                         else
                             return <li id={ msgs.name.valueOf() == 'BimboBOT'? 'chat_bot' : 'others' } key={index}>
-                            <span id="msgs"><img src={ msgs.image } /><br/><strong>{ msgs.name }: </strong>
-                                <Linkify>{ msgs.text }</Linkify></span><br/>
+                            <span id="msgs"><img className="prof_pic" src={ msgs.image } /><br/><strong>{ msgs.name }: </strong>
+                            {checkPIC(msgs.text)? 
+                                <img id="sent_img" src={msgs.text} />
+                                :
+                                <Linkify>{ msgs.text }</Linkify>}</span><br/>
                             <span id="time">{ msgs.time }</span><br/>
                             </li>})
                 }

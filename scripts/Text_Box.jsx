@@ -24,16 +24,19 @@ export function Text_Box(props) {
         document.getElementById("msg").value = "";
     }
     return (
-        <form className="chat"
-            onSubmit = { pushVal }>
-            <input id="msg"
-                className="msg_txt"
-                placeholder="Enter a message here..."
-                type="text"/>
-            <button className="send"
-                type="submit">
-                Send
-            </button>
-        </form>
+        <div id="TextBox">
+            <form className="chat"
+                onSubmit = { pushVal }>
+                <input id="msg"
+                    className="msg_txt"
+                    placeholder="Enter a message here..."
+                    type="text"/>
+                <button className="send"
+                    type="submit">
+                    Send
+                </button>
+            </form>
+        </div>
+        
     );
 }
