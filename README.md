@@ -65,6 +65,8 @@ If that doesn't work: `sudo vim $(psql -c "show hba_file;" | grep pg_hba.conf)`
 
 ### Known Bugs
     -Occasionally messages and active users don't render until login
+    -Need to setup mocked tests
+    -Token IDs don't refresh automatically
     
 ### Features To Add
     -More Login Methods
