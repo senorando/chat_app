@@ -40,9 +40,6 @@ class Users(db.Model):
     def __init__(self, name, id):
         self.name = name
         self.id = id
-        
-    def __repr__(self):
-        return '<Username: %s\nEmail: %s>' % (self.name, self.id)
 class chatMessages(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     text = db.Column(db.Text)
@@ -57,9 +54,6 @@ class chatMessages(db.Model):
         self.time = time
         self.user_id = user_id
         self.image = image
-        
-    def __repr__(self):
-        return '<%s: %s \n%s \n%s\n%s>' % (self.name, self.text, self.time, self.user_id, self.image)
 #-----------------------------------#
 db.create_all()
 db.session.commit()
@@ -101,19 +95,15 @@ def emit_all_messages(channel):
     socketio.emit(channel, {
         'allMessages': all_messages
     })
-def genUserName():
-    guest_n1 = ["strange", "smelly", "hungry", "angry", "rich", "annoying", "goofy", "lonely", "lazy", "edible", "adorable", "homely", "impossible", "disturbed", "agreeable", "shy", "dull", "spotless", "jolly", "jittery", "annoying", "doubtful", "dizzy", "itchy", "inquisitive", "splendid", "lively", "breakable", "lucky", "super", "tender", "troubled", "muddy", "fancy", "cautious", "fragile", "mushy", "tasty", "uptight", "obnoxious", "glamorous", "clumsy", "concerned", "odd", "clever", "grieving", "grotesque", "grumpy", "poised", "plain", "wild", "witty", "prickly", "wicked", "hilarious", "defeated", "puzzled", "boorish", "irksome", "obtuse"];
-    guest_n2 = ["Dinosaur", "Turtle", "Cow", "Donkey", "Hippo", "Person", "Tortilla", "Dog", "Cat", "Turtle", "Sloth", "Sock", "Monkey", "Baby", "Hero", "Peacock", "Boar", "Caterpillar", "Clam", "Sardine", "Walrus", "Bee", "Iguana", "Hamster", "Aardvark", "Alpaca", "Barracuda", "Baboon", "Camel", "Armadillo", "Chicken", "Dragon", "Eagle", "Elephant", "Ferret", "Flamingo", "Fox", "Panda", "Giraffe", "Hawk", "Gazelle", "Hog", "Jellyfish", "Lemur", "Llama", "Narwhal", "Otter", "Penguin", "Pelican", "Raccoon", "Sheep", "Snail", "Turkey", "Weasel"];
-    rand = random.randint(0, 50)
-    rand_n1 = random.randint(0, len(guest_n1) - 1)
-    rand_n2 = random.randint(0, len(guest_n2) - 1)
-    full_name = (guest_n1[rand_n1] + "_" + guest_n2[rand_n2])
+# def genUserName():
+#     guest_n1 = ["strange", "smelly", "hungry", "angry", "rich", "annoying", "goofy", "lonely", "lazy", "edible", "adorable", "homely", "impossible", "disturbed", "agreeable", "shy", "dull", "spotless", "jolly", "jittery", "annoying", "doubtful", "dizzy", "itchy", "inquisitive", "splendid", "lively", "breakable", "lucky", "super", "tender", "troubled", "muddy", "fancy", "cautious", "fragile", "mushy", "tasty", "uptight", "obnoxious", "glamorous", "clumsy", "concerned", "odd", "clever", "grieving", "grotesque", "grumpy", "poised", "plain", "wild", "witty", "prickly", "wicked", "hilarious", "defeated", "puzzled", "boorish", "irksome", "obtuse"];
+#     guest_n2 = ["Dinosaur", "Turtle", "Cow", "Donkey", "Hippo", "Person", "Tortilla", "Dog", "Cat", "Turtle", "Sloth", "Sock", "Monkey", "Baby", "Hero", "Peacock", "Boar", "Caterpillar", "Clam", "Sardine", "Walrus", "Bee", "Iguana", "Hamster", "Aardvark", "Alpaca", "Barracuda", "Baboon", "Camel", "Armadillo", "Chicken", "Dragon", "Eagle", "Elephant", "Ferret", "Flamingo", "Fox", "Panda", "Giraffe", "Hawk", "Gazelle", "Hog", "Jellyfish", "Lemur", "Llama", "Narwhal", "Otter", "Penguin", "Pelican", "Raccoon", "Sheep", "Snail", "Turkey", "Weasel"];
+#     rand = random.randint(0, 50)
+#     rand_n1 = random.randint(0, len(guest_n1) - 1)
+#     rand_n2 = random.randint(0, len(guest_n2) - 1)
+#     full_name = (guest_n1[rand_n1] + "_" + guest_n2[rand_n2])
     
-    return full_name
-def findUrl(string):
-    regex = "(?i)\b((?:https?://|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'\".,<>?«»“”‘’]))"
-    url = re.findall(regex,string)       
-    return [x[0] for x in url]
+#     return full_name
 #-----------------------------------#
 @socketio.on('new message')
 def on_new_message(data):

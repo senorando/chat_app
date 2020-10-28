@@ -70,5 +70,3 @@ class unmocked_tests(unittest.TestCase):
         
         self.assertEqual(bot.command(''), expected)
     
-if __name__ == '__main__':
-    unittest.main()

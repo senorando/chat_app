@@ -1,16 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import { animateScroll } from "react-scroll";
+import React, { useEffect } from 'react';
+import { animateScroll } from 'react-scroll';
 import Linkify from 'react-linkify';
 
-import { Socket } from './Socket';
-
 export function Chatbox(props) {
-    
     const msgs = props.chatLog;
 
     function scroll() {
         animateScroll.scrollToBottom({
-        containerId: "msg_list"
+        containerId: 'msg_list'
         });
     }
     function checkPIC(url) {
@@ -19,28 +16,28 @@ export function Chatbox(props) {
 
     useEffect(() => { scroll(); });
     return (
-        <div id="logs"
-            className="chat">
-            <ul id="msg_list">
+        <div id='logs'
+            className='chat'>
+            <ul id='msg_list'>
                 {msgs.map(( msgs, index) => {
                         if(msgs.email == props.email)
-                            return <li id="self" key={index}>
-                                    <span id="msgs">
+                            return <li id='self' key={index}>
+                                    <span id='msgs'>
                                     {checkPIC(msgs.text)? 
-                                        <img id="sent_img" src={msgs.text} />
+                                        <img id='sent_img' src={msgs.text} />
                                         :
                                         <Linkify>{ msgs.text }</Linkify>}
                                     </span><br/>
-                                    <span id="time">{ msgs.time }</span><br/>
+                                    <span id='time'>{ msgs.time }</span><br/>
                                     </li>;
                         else
                             return <li id={ msgs.name.valueOf() == 'BimboBOT'? 'chat_bot' : 'others' } key={index}>
-                            <span id="msgs"><img className="prof_pic" src={ msgs.image } /><br/><strong>{ msgs.name }: </strong>
+                            <span id='msgs'><img className='prof_pic' src={ msgs.image } /><br/><strong>{ msgs.name }: </strong>
                             {checkPIC(msgs.text)? 
-                                <img id="sent_img" src={msgs.text} />
+                                <img id='sent_img' src={msgs.text} />
                                 :
                                 <Linkify>{ msgs.text }</Linkify>}</span><br/>
-                            <span id="time">{ msgs.time }</span><br/>
+                            <span id='time'>{ msgs.time }</span><br/>
                             </li>})
                 }
             </ul>

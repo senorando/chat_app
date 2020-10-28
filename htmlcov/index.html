@@ -1,0 +1,3500 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Coverage report</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.ba-throttle-debounce.min.js"></script>
+    <script type="text/javascript" src="jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="jquery.hotkeys.js"></script>
+    <script type="text/javascript" src="coverage_html.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(coverage.index_ready);
+    </script>
+</head>
+<body class="indexfile">
+<div id="header">
+    <div class="content">
+        <h1>Coverage report:
+            <span class="pc_cov">33%</span>
+        </h1>
+        <img id="keyboard_icon" src="keybd_closed.png" alt="Show keyboard shortcuts" />
+        <form id="filter_container">
+            <input id="filter" type="text" value="" placeholder="filter..." />
+        </form>
+    </div>
+</div>
+<div class="help_panel">
+    <img id="panel_icon" src="keybd_open.png" alt="Hide keyboard shortcuts" />
+    <p class="legend">Hot-keys on this page</p>
+    <div>
+    <p class="keyhelp">
+        <span class="key">n</span>
+        <span class="key">s</span>
+        <span class="key">m</span>
+        <span class="key">x</span>
+        <span class="key">c</span> &nbsp; change column sorting
+    </p>
+    </div>
+</div>
+<div id="index">
+    <table class="index">
+        <thead>
+            <tr class="tablehead" title="Click to sort">
+                <th class="name left headerSortDown shortkey_n">Module</th>
+                <th class="shortkey_s">statements</th>
+                <th class="shortkey_m">missing</th>
+                <th class="shortkey_x">excluded</th>
+                <th class="right shortkey_c">coverage</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr class="total">
+                <td class="name left">Total</td>
+                <td>78241</td>
+                <td>52178</td>
+                <td>687</td>
+                <td class="right" data-ratio="26063 78241">33%</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_certifi___init___py.html">/home/ec2-user/.local/lib/python3.6/site-packages/certifi/__init__.py</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="2 2">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_certifi_core_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/certifi/core.py</a></td>
+                <td>20</td>
+                <td>10</td>
+                <td>0</td>
+                <td class="right" data-ratio="10 20">50%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_chardet___init___py.html">/home/ec2-user/.local/lib/python3.6/site-packages/chardet/__init__.py</a></td>
+                <td>11</td>
+                <td>7</td>
+                <td>0</td>
+                <td class="right" data-ratio="4 11">36%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_chardet_big5freq_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/chardet/big5freq.py</a></td>
+                <td>3</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="3 3">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_chardet_big5prober_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/chardet/big5prober.py</a></td>
+                <td>14</td>
+                <td>6</td>
+                <td>0</td>
+                <td class="right" data-ratio="8 14">57%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_chardet_chardistribution_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/chardet/chardistribution.py</a></td>
+                <td>117</td>
+                <td>83</td>
+                <td>0</td>
+                <td class="right" data-ratio="34 117">29%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_chardet_charsetgroupprober_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/chardet/charsetgroupprober.py</a></td>
+                <td>70</td>
+                <td>61</td>
+                <td>0</td>
+                <td class="right" data-ratio="9 70">13%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_chardet_charsetprober_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/chardet/charsetprober.py</a></td>
+                <td>50</td>
+                <td>36</td>
+                <td>0</td>
+                <td class="right" data-ratio="14 50">28%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_chardet_codingstatemachine_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/chardet/codingstatemachine.py</a></td>
+                <td>27</td>
+                <td>18</td>
+                <td>0</td>
+                <td class="right" data-ratio="9 27">33%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_chardet_compat_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/chardet/compat.py</a></td>
+                <td>10</td>
+                <td>4</td>
+                <td>0</td>
+                <td class="right" data-ratio="6 10">60%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_chardet_cp949prober_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/chardet/cp949prober.py</a></td>
+                <td>14</td>
+                <td>6</td>
+                <td>0</td>
+                <td class="right" data-ratio="8 14">57%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_chardet_enums_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/chardet/enums.py</a></td>
+                <td>34</td>
+                <td>1</td>
+                <td>0</td>
+                <td class="right" data-ratio="33 34">97%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_chardet_escprober_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/chardet/escprober.py</a></td>
+                <td>56</td>
+                <td>45</td>
+                <td>0</td>
+                <td class="right" data-ratio="11 56">20%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_chardet_escsm_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/chardet/escsm.py</a></td>
+                <td>17</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="17 17">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_chardet_eucjpprober_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/chardet/eucjpprober.py</a></td>
+                <td>47</td>
+                <td>34</td>
+                <td>0</td>
+                <td class="right" data-ratio="13 47">28%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_chardet_euckrfreq_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/chardet/euckrfreq.py</a></td>
+                <td>3</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="3 3">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_chardet_euckrprober_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/chardet/euckrprober.py</a></td>
+                <td>14</td>
+                <td>6</td>
+                <td>0</td>
+                <td class="right" data-ratio="8 14">57%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_chardet_euctwfreq_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/chardet/euctwfreq.py</a></td>
+                <td>3</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="3 3">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_chardet_euctwprober_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/chardet/euctwprober.py</a></td>
+                <td>14</td>
+                <td>6</td>
+                <td>0</td>
+                <td class="right" data-ratio="8 14">57%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_chardet_gb2312freq_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/chardet/gb2312freq.py</a></td>
+                <td>3</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="3 3">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_chardet_gb2312prober_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/chardet/gb2312prober.py</a></td>
+                <td>14</td>
+                <td>6</td>
+                <td>0</td>
+                <td class="right" data-ratio="8 14">57%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_chardet_hebrewprober_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/chardet/hebrewprober.py</a></td>
+                <td>74</td>
+                <td>48</td>
+                <td>0</td>
+                <td class="right" data-ratio="26 74">35%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_chardet_jisfreq_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/chardet/jisfreq.py</a></td>
+                <td>3</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="3 3">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_chardet_jpcntx_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/chardet/jpcntx.py</a></td>
+                <td>80</td>
+                <td>61</td>
+                <td>0</td>
+                <td class="right" data-ratio="19 80">24%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_chardet_langbulgarianmodel_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/chardet/langbulgarianmodel.py</a></td>
+                <td>5</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="5 5">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_chardet_langcyrillicmodel_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/chardet/langcyrillicmodel.py</a></td>
+                <td>13</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="13 13">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_chardet_langgreekmodel_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/chardet/langgreekmodel.py</a></td>
+                <td>5</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="5 5">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_chardet_langhebrewmodel_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/chardet/langhebrewmodel.py</a></td>
+                <td>3</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="3 3">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_chardet_langthaimodel_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/chardet/langthaimodel.py</a></td>
+                <td>3</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="3 3">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_chardet_langturkishmodel_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/chardet/langturkishmodel.py</a></td>
+                <td>3</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="3 3">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_chardet_latin1prober_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/chardet/latin1prober.py</a></td>
+                <td>50</td>
+                <td>29</td>
+                <td>0</td>
+                <td class="right" data-ratio="21 50">42%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_chardet_mbcharsetprober_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/chardet/mbcharsetprober.py</a></td>
+                <td>42</td>
+                <td>33</td>
+                <td>0</td>
+                <td class="right" data-ratio="9 42">21%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_chardet_mbcsgroupprober_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/chardet/mbcsgroupprober.py</a></td>
+                <td>14</td>
+                <td>3</td>
+                <td>0</td>
+                <td class="right" data-ratio="11 14">79%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_chardet_mbcssm_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/chardet/mbcssm.py</a></td>
+                <td>41</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="41 41">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_chardet_sbcharsetprober_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/chardet/sbcharsetprober.py</a></td>
+                <td>73</td>
+                <td>60</td>
+                <td>0</td>
+                <td class="right" data-ratio="13 73">18%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_chardet_sbcsgroupprober_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/chardet/sbcsgroupprober.py</a></td>
+                <td>19</td>
+                <td>8</td>
+                <td>0</td>
+                <td class="right" data-ratio="11 19">58%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_chardet_sjisprober_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/chardet/sjisprober.py</a></td>
+                <td>47</td>
+                <td>34</td>
+                <td>0</td>
+                <td class="right" data-ratio="13 47">28%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_chardet_universaldetector_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/chardet/universaldetector.py</a></td>
+                <td>124</td>
+                <td>104</td>
+                <td>0</td>
+                <td class="right" data-ratio="20 124">16%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_chardet_utf8prober_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/chardet/utf8prober.py</a></td>
+                <td>41</td>
+                <td>29</td>
+                <td>0</td>
+                <td class="right" data-ratio="12 41">29%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_chardet_version_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/chardet/version.py</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="2 2">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns___init___py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/__init__.py</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="2 2">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns__compat_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/_compat.py</a></td>
+                <td>38</td>
+                <td>20</td>
+                <td>0</td>
+                <td class="right" data-ratio="18 38">47%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_dnssec_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/dnssec.py</a></td>
+                <td>283</td>
+                <td>224</td>
+                <td>0</td>
+                <td class="right" data-ratio="59 283">21%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_e164_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/e164.py</a></td>
+                <td>34</td>
+                <td>25</td>
+                <td>0</td>
+                <td class="right" data-ratio="9 34">26%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_edns_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/edns.py</a></td>
+                <td>125</td>
+                <td>84</td>
+                <td>0</td>
+                <td class="right" data-ratio="41 125">33%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_entropy_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/entropy.py</a></td>
+                <td>106</td>
+                <td>75</td>
+                <td>0</td>
+                <td class="right" data-ratio="31 106">29%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_exception_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/exception.py</a></td>
+                <td>44</td>
+                <td>19</td>
+                <td>0</td>
+                <td class="right" data-ratio="25 44">57%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_flags_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/flags.py</a></td>
+                <td>40</td>
+                <td>14</td>
+                <td>0</td>
+                <td class="right" data-ratio="26 40">65%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_grange_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/grange.py</a></td>
+                <td>30</td>
+                <td>27</td>
+                <td>0</td>
+                <td class="right" data-ratio="3 30">10%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_hash_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/hash.py</a></td>
+                <td>13</td>
+                <td>1</td>
+                <td>0</td>
+                <td class="right" data-ratio="12 13">92%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_inet_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/inet.py</a></td>
+                <td>42</td>
+                <td>30</td>
+                <td>0</td>
+                <td class="right" data-ratio="12 42">29%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_ipv4_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/ipv4.py</a></td>
+                <td>26</td>
+                <td>9</td>
+                <td>0</td>
+                <td class="right" data-ratio="17 26">65%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_ipv6_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/ipv6.py</a></td>
+                <td>99</td>
+                <td>57</td>
+                <td>0</td>
+                <td class="right" data-ratio="42 99">42%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_message_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/message.py</a></td>
+                <td>585</td>
+                <td>519</td>
+                <td>0</td>
+                <td class="right" data-ratio="66 585">11%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_name_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/name.py</a></td>
+                <td>509</td>
+                <td>343</td>
+                <td>0</td>
+                <td class="right" data-ratio="166 509">33%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_namedict_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/namedict.py</a></td>
+                <td>49</td>
+                <td>34</td>
+                <td>0</td>
+                <td class="right" data-ratio="15 49">31%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_node_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/node.py</a></td>
+                <td>56</td>
+                <td>38</td>
+                <td>0</td>
+                <td class="right" data-ratio="18 56">32%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_opcode_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/opcode.py</a></td>
+                <td>30</td>
+                <td>15</td>
+                <td>0</td>
+                <td class="right" data-ratio="15 30">50%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_query_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/query.py</a></td>
+                <td>301</td>
+                <td>257</td>
+                <td>0</td>
+                <td class="right" data-ratio="44 301">15%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_rcode_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/rcode.py</a></td>
+                <td>45</td>
+                <td>23</td>
+                <td>0</td>
+                <td class="right" data-ratio="22 45">49%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_rdata_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/rdata.py</a></td>
+                <td>198</td>
+                <td>135</td>
+                <td>0</td>
+                <td class="right" data-ratio="63 198">32%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_rdataclass_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/rdataclass.py</a></td>
+                <td>36</td>
+                <td>18</td>
+                <td>0</td>
+                <td class="right" data-ratio="18 36">50%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_rdataset_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/rdataset.py</a></td>
+                <td>144</td>
+                <td>111</td>
+                <td>0</td>
+                <td class="right" data-ratio="33 144">23%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_rdatatype_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/rdatatype.py</a></td>
+                <td>109</td>
+                <td>25</td>
+                <td>0</td>
+                <td class="right" data-ratio="84 109">77%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_rdtypes_ANY_AFSDB_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/rdtypes/ANY/AFSDB.py</a></td>
+                <td>12</td>
+                <td>4</td>
+                <td>0</td>
+                <td class="right" data-ratio="8 12">67%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_rdtypes_ANY_AVC_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/rdtypes/ANY/AVC.py</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="2 2">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_rdtypes_ANY_CAA_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/rdtypes/ANY/CAA.py</a></td>
+                <td>37</td>
+                <td>24</td>
+                <td>0</td>
+                <td class="right" data-ratio="13 37">35%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_rdtypes_ANY_CDNSKEY_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/rdtypes/ANY/CDNSKEY.py</a></td>
+                <td>4</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="4 4">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_rdtypes_ANY_CDS_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/rdtypes/ANY/CDS.py</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="2 2">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_rdtypes_ANY_CERT_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/rdtypes/ANY/CERT.py</a></td>
+                <td>61</td>
+                <td>42</td>
+                <td>0</td>
+                <td class="right" data-ratio="19 61">31%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_rdtypes_ANY_CNAME_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/rdtypes/ANY/CNAME.py</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="2 2">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_rdtypes_ANY_CSYNC_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/rdtypes/ANY/CSYNC.py</a></td>
+                <td>90</td>
+                <td>75</td>
+                <td>0</td>
+                <td class="right" data-ratio="15 90">17%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_rdtypes_ANY_DLV_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/rdtypes/ANY/DLV.py</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="2 2">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_rdtypes_ANY_DNAME_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/rdtypes/ANY/DNAME.py</a></td>
+                <td>4</td>
+                <td>1</td>
+                <td>0</td>
+                <td class="right" data-ratio="3 4">75%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_rdtypes_ANY_DNSKEY_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/rdtypes/ANY/DNSKEY.py</a></td>
+                <td>4</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="4 4">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_rdtypes_ANY_DS_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/rdtypes/ANY/DS.py</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="2 2">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_rdtypes_ANY_EUI48_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/rdtypes/ANY/EUI48.py</a></td>
+                <td>4</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="4 4">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_rdtypes_ANY_EUI64_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/rdtypes/ANY/EUI64.py</a></td>
+                <td>4</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="4 4">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_rdtypes_ANY_GPOS_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/rdtypes/ANY/GPOS.py</a></td>
+                <td>102</td>
+                <td>77</td>
+                <td>0</td>
+                <td class="right" data-ratio="25 102">25%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_rdtypes_ANY_HINFO_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/rdtypes/ANY/HINFO.py</a></td>
+                <td>49</td>
+                <td>35</td>
+                <td>0</td>
+                <td class="right" data-ratio="14 49">29%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_rdtypes_ANY_HIP_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/rdtypes/ANY/HIP.py</a></td>
+                <td>74</td>
+                <td>58</td>
+                <td>0</td>
+                <td class="right" data-ratio="16 74">22%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_rdtypes_ANY_ISDN_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/rdtypes/ANY/ISDN.py</a></td>
+                <td>59</td>
+                <td>45</td>
+                <td>0</td>
+                <td class="right" data-ratio="14 59">24%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_rdtypes_ANY_LOC_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/rdtypes/ANY/LOC.py</a></td>
+                <td>210</td>
+                <td>181</td>
+                <td>0</td>
+                <td class="right" data-ratio="29 210">14%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_rdtypes_ANY_MX_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/rdtypes/ANY/MX.py</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="2 2">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_rdtypes_ANY_NS_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/rdtypes/ANY/NS.py</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="2 2">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_rdtypes_ANY_NSEC_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/rdtypes/ANY/NSEC.py</a></td>
+                <td>92</td>
+                <td>76</td>
+                <td>0</td>
+                <td class="right" data-ratio="16 92">17%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_rdtypes_ANY_NSEC3_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/rdtypes/ANY/NSEC3.py</a></td>
+                <td>129</td>
+                <td>107</td>
+                <td>0</td>
+                <td class="right" data-ratio="22 129">17%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_rdtypes_ANY_NSEC3PARAM_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/rdtypes/ANY/NSEC3PARAM.py</a></td>
+                <td>46</td>
+                <td>32</td>
+                <td>0</td>
+                <td class="right" data-ratio="14 46">30%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_rdtypes_ANY_OPENPGPKEY_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/rdtypes/ANY/OPENPGPKEY.py</a></td>
+                <td>29</td>
+                <td>17</td>
+                <td>0</td>
+                <td class="right" data-ratio="12 29">41%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_rdtypes_ANY_PTR_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/rdtypes/ANY/PTR.py</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="2 2">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_rdtypes_ANY_RP_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/rdtypes/ANY/RP.py</a></td>
+                <td>43</td>
+                <td>29</td>
+                <td>0</td>
+                <td class="right" data-ratio="14 43">33%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_rdtypes_ANY_RRSIG_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/rdtypes/ANY/RRSIG.py</a></td>
+                <td>79</td>
+                <td>57</td>
+                <td>0</td>
+                <td class="right" data-ratio="22 79">28%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_rdtypes_ANY_RT_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/rdtypes/ANY/RT.py</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="2 2">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_rdtypes_ANY_SOA_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/rdtypes/ANY/SOA.py</a></td>
+                <td>57</td>
+                <td>42</td>
+                <td>0</td>
+                <td class="right" data-ratio="15 57">26%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_rdtypes_ANY_SPF_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/rdtypes/ANY/SPF.py</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="2 2">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_rdtypes_ANY_SSHFP_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/rdtypes/ANY/SSHFP.py</a></td>
+                <td>39</td>
+                <td>26</td>
+                <td>0</td>
+                <td class="right" data-ratio="13 39">33%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_rdtypes_ANY_TLSA_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/rdtypes/ANY/TLSA.py</a></td>
+                <td>41</td>
+                <td>28</td>
+                <td>0</td>
+                <td class="right" data-ratio="13 41">32%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_rdtypes_ANY_TXT_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/rdtypes/ANY/TXT.py</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="2 2">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_rdtypes_ANY_URI_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/rdtypes/ANY/URI.py</a></td>
+                <td>41</td>
+                <td>27</td>
+                <td>0</td>
+                <td class="right" data-ratio="14 41">34%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_rdtypes_ANY_X25_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/rdtypes/ANY/X25.py</a></td>
+                <td>33</td>
+                <td>19</td>
+                <td>0</td>
+                <td class="right" data-ratio="14 33">42%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_rdtypes_ANY___init___py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/rdtypes/ANY/__init__.py</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="2 2">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_rdtypes_CH___init___py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/rdtypes/CH/__init__.py</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="2 2">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_rdtypes_IN_A_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/rdtypes/IN/A.py</a></td>
+                <td>23</td>
+                <td>10</td>
+                <td>0</td>
+                <td class="right" data-ratio="13 23">57%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_rdtypes_IN_AAAA_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/rdtypes/IN/AAAA.py</a></td>
+                <td>23</td>
+                <td>10</td>
+                <td>0</td>
+                <td class="right" data-ratio="13 23">57%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_rdtypes_IN_APL_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/rdtypes/IN/APL.py</a></td>
+                <td>101</td>
+                <td>79</td>
+                <td>0</td>
+                <td class="right" data-ratio="22 101">22%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_rdtypes_IN_DHCID_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/rdtypes/IN/DHCID.py</a></td>
+                <td>28</td>
+                <td>17</td>
+                <td>0</td>
+                <td class="right" data-ratio="11 28">39%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_rdtypes_IN_IPSECKEY_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/rdtypes/IN/IPSECKEY.py</a></td>
+                <td>93</td>
+                <td>79</td>
+                <td>0</td>
+                <td class="right" data-ratio="14 93">15%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_rdtypes_IN_KX_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/rdtypes/IN/KX.py</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="2 2">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_rdtypes_IN_NAPTR_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/rdtypes/IN/NAPTR.py</a></td>
+                <td>69</td>
+                <td>52</td>
+                <td>0</td>
+                <td class="right" data-ratio="17 69">25%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_rdtypes_IN_NSAP_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/rdtypes/IN/NSAP.py</a></td>
+                <td>28</td>
+                <td>15</td>
+                <td>0</td>
+                <td class="right" data-ratio="13 28">46%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_rdtypes_IN_NSAP_PTR_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/rdtypes/IN/NSAP_PTR.py</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="2 2">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_rdtypes_IN_PX_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/rdtypes/IN/PX.py</a></td>
+                <td>50</td>
+                <td>36</td>
+                <td>0</td>
+                <td class="right" data-ratio="14 50">28%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_rdtypes_IN_SRV_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/rdtypes/IN/SRV.py</a></td>
+                <td>41</td>
+                <td>27</td>
+                <td>0</td>
+                <td class="right" data-ratio="14 41">34%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_rdtypes_IN_WKS_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/rdtypes/IN/WKS.py</a></td>
+                <td>66</td>
+                <td>50</td>
+                <td>0</td>
+                <td class="right" data-ratio="16 66">24%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_rdtypes_IN___init___py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/rdtypes/IN/__init__.py</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="2 2">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_rdtypes___init___py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/rdtypes/__init__.py</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="2 2">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_rdtypes_dnskeybase_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/rdtypes/dnskeybase.py</a></td>
+                <td>71</td>
+                <td>48</td>
+                <td>0</td>
+                <td class="right" data-ratio="23 71">32%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_rdtypes_dsbase_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/rdtypes/dsbase.py</a></td>
+                <td>41</td>
+                <td>28</td>
+                <td>0</td>
+                <td class="right" data-ratio="13 41">32%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_rdtypes_euibase_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/rdtypes/euibase.py</a></td>
+                <td>34</td>
+                <td>22</td>
+                <td>0</td>
+                <td class="right" data-ratio="12 34">35%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_rdtypes_mxbase_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/rdtypes/mxbase.py</a></td>
+                <td>51</td>
+                <td>29</td>
+                <td>0</td>
+                <td class="right" data-ratio="22 51">43%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_rdtypes_nsbase_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/rdtypes/nsbase.py</a></td>
+                <td>40</td>
+                <td>21</td>
+                <td>0</td>
+                <td class="right" data-ratio="19 40">48%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_rdtypes_txtbase_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/rdtypes/txtbase.py</a></td>
+                <td>62</td>
+                <td>47</td>
+                <td>0</td>
+                <td class="right" data-ratio="15 62">24%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_renderer_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/renderer.py</a></td>
+                <td>131</td>
+                <td>106</td>
+                <td>0</td>
+                <td class="right" data-ratio="25 131">19%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_resolver_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/resolver.py</a></td>
+                <td>799</td>
+                <td>621</td>
+                <td>0</td>
+                <td class="right" data-ratio="178 799">22%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_reversename_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/reversename.py</a></td>
+                <td>43</td>
+                <td>33</td>
+                <td>0</td>
+                <td class="right" data-ratio="10 43">23%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_rrset_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/rrset.py</a></td>
+                <td>74</td>
+                <td>53</td>
+                <td>0</td>
+                <td class="right" data-ratio="21 74">28%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_set_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/set.py</a></td>
+                <td>119</td>
+                <td>85</td>
+                <td>0</td>
+                <td class="right" data-ratio="34 119">29%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_tokenizer_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/tokenizer.py</a></td>
+                <td>298</td>
+                <td>244</td>
+                <td>0</td>
+                <td class="right" data-ratio="54 298">18%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_tsig_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/tsig.py</a></td>
+                <td>125</td>
+                <td>93</td>
+                <td>0</td>
+                <td class="right" data-ratio="32 125">26%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_tsigkeyring_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/tsigkeyring.py</a></td>
+                <td>18</td>
+                <td>12</td>
+                <td>0</td>
+                <td class="right" data-ratio="6 18">33%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_ttl_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/ttl.py</a></td>
+                <td>33</td>
+                <td>28</td>
+                <td>0</td>
+                <td class="right" data-ratio="5 33">15%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_update_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/update.py</a></td>
+                <td>103</td>
+                <td>84</td>
+                <td>0</td>
+                <td class="right" data-ratio="19 103">18%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_version_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/version.py</a></td>
+                <td>12</td>
+                <td>3</td>
+                <td>0</td>
+                <td class="right" data-ratio="9 12">75%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_wiredata_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/wiredata.py</a></td>
+                <td>54</td>
+                <td>40</td>
+                <td>0</td>
+                <td class="right" data-ratio="14 54">26%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dns_zone_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dns/zone.py</a></td>
+                <td>534</td>
+                <td>469</td>
+                <td>0</td>
+                <td class="right" data-ratio="65 534">12%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dotenv___init___py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dotenv/__init__.py</a></td>
+                <td>23</td>
+                <td>17</td>
+                <td>0</td>
+                <td class="right" data-ratio="6 23">26%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dotenv_compat_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dotenv/compat.py</a></td>
+                <td>22</td>
+                <td>6</td>
+                <td>0</td>
+                <td class="right" data-ratio="16 22">73%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dotenv_main_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dotenv/main.py</a></td>
+                <td>166</td>
+                <td>101</td>
+                <td>0</td>
+                <td class="right" data-ratio="65 166">39%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_dotenv_parser_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/dotenv/parser.py</a></td>
+                <td>124</td>
+                <td>33</td>
+                <td>0</td>
+                <td class="right" data-ratio="91 124">73%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_engineio___init___py.html">/home/ec2-user/.local/lib/python3.6/site-packages/engineio/__init__.py</a></td>
+                <td>6</td>
+                <td>0</td>
+                <td>15</td>
+                <td class="right" data-ratio="6 6">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_engineio_async_drivers___init___py.html">/home/ec2-user/.local/lib/python3.6/site-packages/engineio/async_drivers/__init__.py</a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_engineio_async_drivers_asgi_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/engineio/async_drivers/asgi.py</a></td>
+                <td>85</td>
+                <td>73</td>
+                <td>47</td>
+                <td class="right" data-ratio="12 85">14%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_engineio_async_drivers_eventlet_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/engineio/async_drivers/eventlet.py</a></td>
+                <td>15</td>
+                <td>6</td>
+                <td>0</td>
+                <td class="right" data-ratio="9 15">60%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_engineio_async_drivers_tornado_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/engineio/async_drivers/tornado.py</a></td>
+                <td>48</td>
+                <td>43</td>
+                <td>61</td>
+                <td class="right" data-ratio="5 48">10%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_engineio_asyncio_client_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/engineio/asyncio_client.py</a></td>
+                <td>324</td>
+                <td>291</td>
+                <td>58</td>
+                <td class="right" data-ratio="33 324">10%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_engineio_asyncio_server_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/engineio/asyncio_server.py</a></td>
+                <td>192</td>
+                <td>168</td>
+                <td>33</td>
+                <td class="right" data-ratio="24 192">12%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_engineio_asyncio_socket_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/engineio/asyncio_socket.py</a></td>
+                <td>147</td>
+                <td>129</td>
+                <td>20</td>
+                <td class="right" data-ratio="18 147">12%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_engineio_client_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/engineio/client.py</a></td>
+                <td>373</td>
+                <td>327</td>
+                <td>52</td>
+                <td class="right" data-ratio="46 373">12%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_engineio_exceptions_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/engineio/exceptions.py</a></td>
+                <td>12</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="12 12">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_engineio_middleware_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/engineio/middleware.py</a></td>
+                <td>35</td>
+                <td>23</td>
+                <td>0</td>
+                <td class="right" data-ratio="12 35">34%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_engineio_packet_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/engineio/packet.py</a></td>
+                <td>68</td>
+                <td>57</td>
+                <td>0</td>
+                <td class="right" data-ratio="11 68">16%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_engineio_payload_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/engineio/payload.py</a></td>
+                <td>54</td>
+                <td>46</td>
+                <td>0</td>
+                <td class="right" data-ratio="8 54">15%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_engineio_server_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/engineio/server.py</a></td>
+                <td>301</td>
+                <td>213</td>
+                <td>34</td>
+                <td class="right" data-ratio="88 301">29%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_engineio_socket_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/engineio/socket.py</a></td>
+                <td>158</td>
+                <td>140</td>
+                <td>15</td>
+                <td class="right" data-ratio="18 158">11%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_engineio_static_files_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/engineio/static_files.py</a></td>
+                <td>30</td>
+                <td>28</td>
+                <td>0</td>
+                <td class="right" data-ratio="2 30">7%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_eventlet___init___py.html">/home/ec2-user/.local/lib/python3.6/site-packages/eventlet/__init__.py</a></td>
+                <td>42</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="42 42">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_eventlet_convenience_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/eventlet/convenience.py</a></td>
+                <td>80</td>
+                <td>59</td>
+                <td>0</td>
+                <td class="right" data-ratio="21 80">26%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_eventlet_corolocal_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/eventlet/corolocal.py</a></td>
+                <td>34</td>
+                <td>22</td>
+                <td>0</td>
+                <td class="right" data-ratio="12 34">35%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_eventlet_event_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/eventlet/event.py</a></td>
+                <td>72</td>
+                <td>49</td>
+                <td>0</td>
+                <td class="right" data-ratio="23 72">32%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_eventlet_green_BaseHTTPServer_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/eventlet/green/BaseHTTPServer.py</a></td>
+                <td>8</td>
+                <td>1</td>
+                <td>0</td>
+                <td class="right" data-ratio="7 8">88%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_eventlet_green_SocketServer_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/eventlet/green/SocketServer.py</a></td>
+                <td>6</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="6 6">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_eventlet_green___init___py.html">/home/ec2-user/.local/lib/python3.6/site-packages/eventlet/green/__init__.py</a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_eventlet_green__socket_nodns_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/eventlet/green/_socket_nodns.py</a></td>
+                <td>24</td>
+                <td>7</td>
+                <td>0</td>
+                <td class="right" data-ratio="17 24">71%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_eventlet_green_os_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/eventlet/green/os.py</a></td>
+                <td>67</td>
+                <td>46</td>
+                <td>0</td>
+                <td class="right" data-ratio="21 67">31%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_eventlet_green_select_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/eventlet/green/select.py</a></td>
+                <td>60</td>
+                <td>51</td>
+                <td>0</td>
+                <td class="right" data-ratio="9 60">15%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_eventlet_green_socket_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/eventlet/green/socket.py</a></td>
+                <td>36</td>
+                <td>20</td>
+                <td>0</td>
+                <td class="right" data-ratio="16 36">44%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_eventlet_green_ssl_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/eventlet/green/ssl.py</a></td>
+                <td>272</td>
+                <td>212</td>
+                <td>0</td>
+                <td class="right" data-ratio="60 272">22%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_eventlet_green_thread_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/eventlet/green/thread.py</a></td>
+                <td>58</td>
+                <td>28</td>
+                <td>0</td>
+                <td class="right" data-ratio="30 58">52%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_eventlet_green_threading_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/eventlet/green/threading.py</a></td>
+                <td>71</td>
+                <td>39</td>
+                <td>0</td>
+                <td class="right" data-ratio="32 71">45%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_eventlet_green_time_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/eventlet/green/time.py</a></td>
+                <td>6</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="6 6">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_eventlet_green_zmq_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/eventlet/green/zmq.py</a></td>
+                <td>220</td>
+                <td>218</td>
+                <td>0</td>
+                <td class="right" data-ratio="2 220">1%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_eventlet_greenio___init___py.html">/home/ec2-user/.local/lib/python3.6/site-packages/eventlet/greenio/__init__.py</a></td>
+                <td>5</td>
+                <td>1</td>
+                <td>0</td>
+                <td class="right" data-ratio="4 5">80%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_eventlet_greenio_base_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/eventlet/greenio/base.py</a></td>
+                <td>307</td>
+                <td>230</td>
+                <td>0</td>
+                <td class="right" data-ratio="77 307">25%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_eventlet_greenio_py3_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/eventlet/greenio/py3.py</a></td>
+                <td>139</td>
+                <td>103</td>
+                <td>0</td>
+                <td class="right" data-ratio="36 139">26%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_eventlet_greenpool_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/eventlet/greenpool.py</a></td>
+                <td>128</td>
+                <td>95</td>
+                <td>0</td>
+                <td class="right" data-ratio="33 128">26%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_eventlet_greenthread_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/eventlet/greenthread.py</a></td>
+                <td>128</td>
+                <td>94</td>
+                <td>0</td>
+                <td class="right" data-ratio="34 128">27%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_eventlet_hubs___init___py.html">/home/ec2-user/.local/lib/python3.6/site-packages/eventlet/hubs/__init__.py</a></td>
+                <td>85</td>
+                <td>62</td>
+                <td>0</td>
+                <td class="right" data-ratio="23 85">27%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_eventlet_hubs_epolls_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/eventlet/hubs/epolls.py</a></td>
+                <td>21</td>
+                <td>12</td>
+                <td>0</td>
+                <td class="right" data-ratio="9 21">43%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_eventlet_hubs_hub_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/eventlet/hubs/hub.py</a></td>
+                <td>297</td>
+                <td>224</td>
+                <td>0</td>
+                <td class="right" data-ratio="73 297">25%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_eventlet_hubs_kqueue_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/eventlet/hubs/kqueue.py</a></td>
+                <td>90</td>
+                <td>71</td>
+                <td>0</td>
+                <td class="right" data-ratio="19 90">21%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_eventlet_hubs_poll_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/eventlet/hubs/poll.py</a></td>
+                <td>90</td>
+                <td>75</td>
+                <td>0</td>
+                <td class="right" data-ratio="15 90">17%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_eventlet_hubs_selects_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/eventlet/hubs/selects.py</a></td>
+                <td>52</td>
+                <td>38</td>
+                <td>0</td>
+                <td class="right" data-ratio="14 52">27%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_eventlet_hubs_timer_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/eventlet/hubs/timer.py</a></td>
+                <td>67</td>
+                <td>48</td>
+                <td>0</td>
+                <td class="right" data-ratio="19 67">28%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_eventlet_patcher_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/eventlet/patcher.py</a></td>
+                <td>257</td>
+                <td>173</td>
+                <td>0</td>
+                <td class="right" data-ratio="84 257">33%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_eventlet_queue_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/eventlet/queue.py</a></td>
+                <td>253</td>
+                <td>188</td>
+                <td>0</td>
+                <td class="right" data-ratio="65 253">26%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_eventlet_semaphore_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/eventlet/semaphore.py</a></td>
+                <td>124</td>
+                <td>73</td>
+                <td>0</td>
+                <td class="right" data-ratio="51 124">41%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_eventlet_support___init___py.html">/home/ec2-user/.local/lib/python3.6/site-packages/eventlet/support/__init__.py</a></td>
+                <td>45</td>
+                <td>16</td>
+                <td>0</td>
+                <td class="right" data-ratio="29 45">64%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_eventlet_support_greendns_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/eventlet/support/greendns.py</a></td>
+                <td>480</td>
+                <td>364</td>
+                <td>0</td>
+                <td class="right" data-ratio="116 480">24%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_eventlet_support_greenlets_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/eventlet/support/greenlets.py</a></td>
+                <td>6</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="6 6">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_eventlet_timeout_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/eventlet/timeout.py</a></td>
+                <td>82</td>
+                <td>59</td>
+                <td>0</td>
+                <td class="right" data-ratio="23 82">28%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_eventlet_websocket_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/eventlet/websocket.py</a></td>
+                <td>531</td>
+                <td>453</td>
+                <td>11</td>
+                <td class="right" data-ratio="78 531">15%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_eventlet_wsgi_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/eventlet/wsgi.py</a></td>
+                <td>611</td>
+                <td>509</td>
+                <td>0</td>
+                <td class="right" data-ratio="102 611">17%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_flask_socketio___init___py.html">/home/ec2-user/.local/lib/python3.6/site-packages/flask_socketio/__init__.py</a></td>
+                <td>304</td>
+                <td>216</td>
+                <td>1</td>
+                <td class="right" data-ratio="88 304">29%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_flask_socketio_namespace_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/flask_socketio/namespace.py</a></td>
+                <td>19</td>
+                <td>11</td>
+                <td>0</td>
+                <td class="right" data-ratio="8 19">42%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_flask_socketio_test_client_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/flask_socketio/test_client.py</a></td>
+                <td>94</td>
+                <td>80</td>
+                <td>0</td>
+                <td class="right" data-ratio="14 94">15%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_flask_sqlalchemy___init___py.html">/home/ec2-user/.local/lib/python3.6/site-packages/flask_sqlalchemy/__init__.py</a></td>
+                <td>489</td>
+                <td>188</td>
+                <td>0</td>
+                <td class="right" data-ratio="301 489">62%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_flask_sqlalchemy__compat_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/flask_sqlalchemy/_compat.py</a></td>
+                <td>16</td>
+                <td>7</td>
+                <td>0</td>
+                <td class="right" data-ratio="9 16">56%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_idna___init___py.html">/home/ec2-user/.local/lib/python3.6/site-packages/idna/__init__.py</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="2 2">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_idna_core_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/idna/core.py</a></td>
+                <td>284</td>
+                <td>246</td>
+                <td>0</td>
+                <td class="right" data-ratio="38 284">13%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_idna_idnadata_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/idna/idnadata.py</a></td>
+                <td>4</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="4 4">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_idna_intranges_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/idna/intranges.py</a></td>
+                <td>29</td>
+                <td>24</td>
+                <td>0</td>
+                <td class="right" data-ratio="5 29">17%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_idna_package_data_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/idna/package_data.py</a></td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="1 1">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_monotonic_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/monotonic.py</a></td>
+                <td>75</td>
+                <td>70</td>
+                <td>0</td>
+                <td class="right" data-ratio="5 75">7%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_psycopg2___init___py.html">/home/ec2-user/.local/lib/python3.6/site-packages/psycopg2/__init__.py</a></td>
+                <td>22</td>
+                <td>4</td>
+                <td>0</td>
+                <td class="right" data-ratio="18 22">82%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_psycopg2__ipaddress_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/psycopg2/_ipaddress.py</a></td>
+                <td>28</td>
+                <td>19</td>
+                <td>0</td>
+                <td class="right" data-ratio="9 28">32%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_psycopg2__json_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/psycopg2/_json.py</a></td>
+                <td>68</td>
+                <td>32</td>
+                <td>0</td>
+                <td class="right" data-ratio="36 68">53%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_psycopg2__range_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/psycopg2/_range.py</a></td>
+                <td>255</td>
+                <td>164</td>
+                <td>0</td>
+                <td class="right" data-ratio="91 255">36%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_psycopg2_compat_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/psycopg2/compat.py</a></td>
+                <td>13</td>
+                <td>5</td>
+                <td>0</td>
+                <td class="right" data-ratio="8 13">62%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_psycopg2_errors_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/psycopg2/errors.py</a></td>
+                <td>3</td>
+                <td>2</td>
+                <td>0</td>
+                <td class="right" data-ratio="1 3">33%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_psycopg2_extensions_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/psycopg2/extensions.py</a></td>
+                <td>91</td>
+                <td>24</td>
+                <td>0</td>
+                <td class="right" data-ratio="67 91">74%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_psycopg2_extras_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/psycopg2/extras.py</a></td>
+                <td>644</td>
+                <td>480</td>
+                <td>0</td>
+                <td class="right" data-ratio="164 644">25%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_psycopg2_tz_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/psycopg2/tz.py</a></td>
+                <td>61</td>
+                <td>37</td>
+                <td>0</td>
+                <td class="right" data-ratio="24 61">39%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_requests___init___py.html">/home/ec2-user/.local/lib/python3.6/site-packages/requests/__init__.py</a></td>
+                <td>60</td>
+                <td>18</td>
+                <td>0</td>
+                <td class="right" data-ratio="42 60">70%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_requests___version___py.html">/home/ec2-user/.local/lib/python3.6/site-packages/requests/__version__.py</a></td>
+                <td>10</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="10 10">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_requests__internal_utils_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/requests/_internal_utils.py</a></td>
+                <td>16</td>
+                <td>12</td>
+                <td>0</td>
+                <td class="right" data-ratio="4 16">25%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_requests_adapters_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/requests/adapters.py</a></td>
+                <td>222</td>
+                <td>171</td>
+                <td>0</td>
+                <td class="right" data-ratio="51 222">23%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_requests_api_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/requests/api.py</a></td>
+                <td>22</td>
+                <td>12</td>
+                <td>0</td>
+                <td class="right" data-ratio="10 22">45%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_requests_auth_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/requests/auth.py</a></td>
+                <td>174</td>
+                <td>141</td>
+                <td>0</td>
+                <td class="right" data-ratio="33 174">19%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_requests_certs_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/requests/certs.py</a></td>
+                <td>4</td>
+                <td>1</td>
+                <td>0</td>
+                <td class="right" data-ratio="3 4">75%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_requests_compat_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/requests/compat.py</a></td>
+                <td>38</td>
+                <td>13</td>
+                <td>0</td>
+                <td class="right" data-ratio="25 38">66%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_requests_cookies_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/requests/cookies.py</a></td>
+                <td>238</td>
+                <td>177</td>
+                <td>0</td>
+                <td class="right" data-ratio="61 238">26%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_requests_exceptions_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/requests/exceptions.py</a></td>
+                <td>32</td>
+                <td>6</td>
+                <td>0</td>
+                <td class="right" data-ratio="26 32">81%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_requests_hooks_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/requests/hooks.py</a></td>
+                <td>15</td>
+                <td>11</td>
+                <td>0</td>
+                <td class="right" data-ratio="4 15">27%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_requests_models_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/requests/models.py</a></td>
+                <td>446</td>
+                <td>374</td>
+                <td>0</td>
+                <td class="right" data-ratio="72 446">16%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_requests_packages_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/requests/packages.py</a></td>
+                <td>6</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="6 6">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_requests_sessions_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/requests/sessions.py</a></td>
+                <td>283</td>
+                <td>231</td>
+                <td>0</td>
+                <td class="right" data-ratio="52 283">18%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_requests_status_codes_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/requests/status_codes.py</a></td>
+                <td>15</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="15 15">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_requests_structures_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/requests/structures.py</a></td>
+                <td>40</td>
+                <td>19</td>
+                <td>0</td>
+                <td class="right" data-ratio="21 40">52%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_requests_utils_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/requests/utils.py</a></td>
+                <td>444</td>
+                <td>376</td>
+                <td>0</td>
+                <td class="right" data-ratio="68 444">15%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_socketio___init___py.html">/home/ec2-user/.local/lib/python3.6/site-packages/socketio/__init__.py</a></td>
+                <td>14</td>
+                <td>0</td>
+                <td>17</td>
+                <td class="right" data-ratio="14 14">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_socketio_asgi_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/socketio/asgi.py</a></td>
+                <td>1</td>
+                <td>0</td>
+                <td>4</td>
+                <td class="right" data-ratio="1 1">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_socketio_asyncio_aiopika_manager_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/socketio/asyncio_aiopika_manager.py</a></td>
+                <td>7</td>
+                <td>0</td>
+                <td>47</td>
+                <td class="right" data-ratio="7 7">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_socketio_asyncio_client_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/socketio/asyncio_client.py</a></td>
+                <td>228</td>
+                <td>197</td>
+                <td>4</td>
+                <td class="right" data-ratio="31 228">14%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_socketio_asyncio_manager_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/socketio/asyncio_manager.py</a></td>
+                <td>32</td>
+                <td>25</td>
+                <td>4</td>
+                <td class="right" data-ratio="7 32">22%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_socketio_asyncio_namespace_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/socketio/asyncio_namespace.py</a></td>
+                <td>46</td>
+                <td>28</td>
+                <td>4</td>
+                <td class="right" data-ratio="18 46">39%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_socketio_asyncio_pubsub_manager_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/socketio/asyncio_pubsub_manager.py</a></td>
+                <td>89</td>
+                <td>68</td>
+                <td>7</td>
+                <td class="right" data-ratio="21 89">24%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_socketio_asyncio_redis_manager_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/socketio/asyncio_redis_manager.py</a></td>
+                <td>20</td>
+                <td>11</td>
+                <td>40</td>
+                <td class="right" data-ratio="9 20">45%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_socketio_asyncio_server_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/socketio/asyncio_server.py</a></td>
+                <td>198</td>
+                <td>164</td>
+                <td>4</td>
+                <td class="right" data-ratio="34 198">17%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_socketio_base_manager_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/socketio/base_manager.py</a></td>
+                <td>118</td>
+                <td>89</td>
+                <td>0</td>
+                <td class="right" data-ratio="29 118">25%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_socketio_client_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/socketio/client.py</a></td>
+                <td>294</td>
+                <td>253</td>
+                <td>7</td>
+                <td class="right" data-ratio="41 294">14%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_socketio_exceptions_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/socketio/exceptions.py</a></td>
+                <td>15</td>
+                <td>5</td>
+                <td>0</td>
+                <td class="right" data-ratio="10 15">67%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_socketio_kafka_manager_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/socketio/kafka_manager.py</a></td>
+                <td>8</td>
+                <td>0</td>
+                <td>20</td>
+                <td class="right" data-ratio="8 8">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_socketio_kombu_manager_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/socketio/kombu_manager.py</a></td>
+                <td>7</td>
+                <td>0</td>
+                <td>55</td>
+                <td class="right" data-ratio="7 7">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_socketio_middleware_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/socketio/middleware.py</a></td>
+                <td>7</td>
+                <td>1</td>
+                <td>0</td>
+                <td class="right" data-ratio="6 7">86%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_socketio_namespace_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/socketio/namespace.py</a></td>
+                <td>47</td>
+                <td>24</td>
+                <td>0</td>
+                <td class="right" data-ratio="23 47">49%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_socketio_packet_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/socketio/packet.py</a></td>
+                <td>117</td>
+                <td>101</td>
+                <td>0</td>
+                <td class="right" data-ratio="16 117">14%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_socketio_pubsub_manager_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/socketio/pubsub_manager.py</a></td>
+                <td>83</td>
+                <td>62</td>
+                <td>7</td>
+                <td class="right" data-ratio="21 83">25%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_socketio_redis_manager_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/socketio/redis_manager.py</a></td>
+                <td>9</td>
+                <td>0</td>
+                <td>62</td>
+                <td class="right" data-ratio="9 9">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_socketio_server_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/socketio/server.py</a></td>
+                <td>261</td>
+                <td>183</td>
+                <td>4</td>
+                <td class="right" data-ratio="78 261">30%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_socketio_tornado_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/socketio/tornado.py</a></td>
+                <td>4</td>
+                <td>0</td>
+                <td>4</td>
+                <td class="right" data-ratio="4 4">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_socketio_zmq_manager_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/socketio/zmq_manager.py</a></td>
+                <td>8</td>
+                <td>0</td>
+                <td>40</td>
+                <td class="right" data-ratio="8 8">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_socks_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/socks.py</a></td>
+                <td>443</td>
+                <td>355</td>
+                <td>0</td>
+                <td class="right" data-ratio="88 443">20%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy___init___py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/__init__.py</a></td>
+                <td>126</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="126 126">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_connectors___init___py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/connectors/__init__.py</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="2 2">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_connectors_zxJDBC_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/connectors/zxJDBC.py</a></td>
+                <td>30</td>
+                <td>12</td>
+                <td>0</td>
+                <td class="right" data-ratio="18 30">60%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_dialects___init___py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/dialects/__init__.py</a></td>
+                <td>35</td>
+                <td>17</td>
+                <td>0</td>
+                <td class="right" data-ratio="18 35">51%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_dialects_postgresql___init___py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/dialects/postgresql/__init__.py</a></td>
+                <td>56</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="56 56">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_dialects_postgresql_array_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/dialects/postgresql/array.py</a></td>
+                <td>90</td>
+                <td>52</td>
+                <td>0</td>
+                <td class="right" data-ratio="38 90">42%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_dialects_postgresql_base_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/dialects/postgresql/base.py</a></td>
+                <td>1007</td>
+                <td>725</td>
+                <td>0</td>
+                <td class="right" data-ratio="282 1007">28%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_dialects_postgresql_dml_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/dialects/postgresql/dml.py</a></td>
+                <td>59</td>
+                <td>36</td>
+                <td>0</td>
+                <td class="right" data-ratio="23 59">39%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_dialects_postgresql_ext_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/dialects/postgresql/ext.py</a></td>
+                <td>54</td>
+                <td>36</td>
+                <td>0</td>
+                <td class="right" data-ratio="18 54">33%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_dialects_postgresql_hstore_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/dialects/postgresql/hstore.py</a></td>
+                <td>137</td>
+                <td>72</td>
+                <td>0</td>
+                <td class="right" data-ratio="65 137">47%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_dialects_postgresql_json_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/dialects/postgresql/json.py</a></td>
+                <td>60</td>
+                <td>29</td>
+                <td>0</td>
+                <td class="right" data-ratio="31 60">52%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_dialects_postgresql_pg8000_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/dialects/postgresql/pg8000.py</a></td>
+                <td>151</td>
+                <td>90</td>
+                <td>0</td>
+                <td class="right" data-ratio="61 151">40%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_dialects_postgresql_psycopg2_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/dialects/postgresql/psycopg2.py</a></td>
+                <td>258</td>
+                <td>109</td>
+                <td>0</td>
+                <td class="right" data-ratio="149 258">58%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_dialects_postgresql_psycopg2cffi_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/dialects/postgresql/psycopg2cffi.py</a></td>
+                <td>15</td>
+                <td>5</td>
+                <td>0</td>
+                <td class="right" data-ratio="10 15">67%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_dialects_postgresql_pygresql_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/dialects/postgresql/pygresql.py</a></td>
+                <td>165</td>
+                <td>116</td>
+                <td>0</td>
+                <td class="right" data-ratio="49 165">30%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_dialects_postgresql_pypostgresql_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/dialects/postgresql/pypostgresql.py</a></td>
+                <td>43</td>
+                <td>16</td>
+                <td>0</td>
+                <td class="right" data-ratio="27 43">63%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_dialects_postgresql_ranges_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/dialects/postgresql/ranges.py</a></td>
+                <td>40</td>
+                <td>12</td>
+                <td>0</td>
+                <td class="right" data-ratio="28 40">70%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_dialects_postgresql_zxjdbc_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/dialects/postgresql/zxjdbc.py</a></td>
+                <td>22</td>
+                <td>8</td>
+                <td>0</td>
+                <td class="right" data-ratio="14 22">64%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_engine___init___py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/engine/__init__.py</a></td>
+                <td>37</td>
+                <td>5</td>
+                <td>0</td>
+                <td class="right" data-ratio="32 37">86%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_engine_base_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/engine/base.py</a></td>
+                <td>766</td>
+                <td>494</td>
+                <td>0</td>
+                <td class="right" data-ratio="272 766">36%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_engine_default_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/engine/default.py</a></td>
+                <td>725</td>
+                <td>409</td>
+                <td>0</td>
+                <td class="right" data-ratio="316 725">44%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_engine_interfaces_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/engine/interfaces.py</a></td>
+                <td>158</td>
+                <td>61</td>
+                <td>0</td>
+                <td class="right" data-ratio="97 158">61%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_engine_reflection_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/engine/reflection.py</a></td>
+                <td>271</td>
+                <td>226</td>
+                <td>0</td>
+                <td class="right" data-ratio="45 271">17%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_engine_result_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/engine/result.py</a></td>
+                <td>578</td>
+                <td>367</td>
+                <td>0</td>
+                <td class="right" data-ratio="211 578">37%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_engine_strategies_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/engine/strategies.py</a></td>
+                <td>154</td>
+                <td>46</td>
+                <td>0</td>
+                <td class="right" data-ratio="108 154">70%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_engine_threadlocal_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/engine/threadlocal.py</a></td>
+                <td>82</td>
+                <td>56</td>
+                <td>0</td>
+                <td class="right" data-ratio="26 82">32%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_engine_url_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/engine/url.py</a></td>
+                <td>135</td>
+                <td>56</td>
+                <td>0</td>
+                <td class="right" data-ratio="79 135">59%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_engine_util_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/engine/util.py</a></td>
+                <td>33</td>
+                <td>28</td>
+                <td>0</td>
+                <td class="right" data-ratio="5 33">15%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_event___init___py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/event/__init__.py</a></td>
+                <td>10</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="10 10">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_event_api_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/event/api.py</a></td>
+                <td>25</td>
+                <td>3</td>
+                <td>0</td>
+                <td class="right" data-ratio="22 25">88%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_event_attr_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/event/attr.py</a></td>
+                <td>236</td>
+                <td>88</td>
+                <td>0</td>
+                <td class="right" data-ratio="148 236">63%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_event_base_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/event/base.py</a></td>
+                <td>131</td>
+                <td>26</td>
+                <td>0</td>
+                <td class="right" data-ratio="105 131">80%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_event_legacy_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/event/legacy.py</a></td>
+                <td>56</td>
+                <td>18</td>
+                <td>0</td>
+                <td class="right" data-ratio="38 56">68%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_event_registry_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/event/registry.py</a></td>
+                <td>136</td>
+                <td>67</td>
+                <td>0</td>
+                <td class="right" data-ratio="69 136">51%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_events_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/events.py</a></td>
+                <td>107</td>
+                <td>35</td>
+                <td>0</td>
+                <td class="right" data-ratio="72 107">67%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_exc_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/exc.py</a></td>
+                <td>163</td>
+                <td>83</td>
+                <td>0</td>
+                <td class="right" data-ratio="80 163">49%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_ext___init___py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/ext/__init__.py</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="2 2">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_ext_baked_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/ext/baked.py</a></td>
+                <td>264</td>
+                <td>197</td>
+                <td>0</td>
+                <td class="right" data-ratio="67 264">25%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_ext_declarative___init___py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/ext/declarative/__init__.py</a></td>
+                <td>12</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="12 12">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_ext_declarative_api_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/ext/declarative/api.py</a></td>
+                <td>186</td>
+                <td>104</td>
+                <td>0</td>
+                <td class="right" data-ratio="82 186">44%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_ext_declarative_base_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/ext/declarative/base.py</a></td>
+                <td>416</td>
+                <td>178</td>
+                <td>0</td>
+                <td class="right" data-ratio="238 416">57%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_ext_declarative_clsregistry_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/ext/declarative/clsregistry.py</a></td>
+                <td>211</td>
+                <td>104</td>
+                <td>0</td>
+                <td class="right" data-ratio="107 211">51%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_inspection_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/inspection.py</a></td>
+                <td>29</td>
+                <td>3</td>
+                <td>0</td>
+                <td class="right" data-ratio="26 29">90%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_interfaces_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/interfaces.py</a></td>
+                <td>82</td>
+                <td>59</td>
+                <td>0</td>
+                <td class="right" data-ratio="23 82">28%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_log_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/log.py</a></td>
+                <td>79</td>
+                <td>33</td>
+                <td>0</td>
+                <td class="right" data-ratio="46 79">58%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_orm___init___py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/orm/__init__.py</a></td>
+                <td>116</td>
+                <td>24</td>
+                <td>0</td>
+                <td class="right" data-ratio="92 116">79%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_orm_attributes_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/orm/attributes.py</a></td>
+                <td>732</td>
+                <td>540</td>
+                <td>0</td>
+                <td class="right" data-ratio="192 732">26%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_orm_base_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/orm/base.py</a></td>
+                <td>159</td>
+                <td>51</td>
+                <td>0</td>
+                <td class="right" data-ratio="108 159">68%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_orm_collections_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/orm/collections.py</a></td>
+                <td>681</td>
+                <td>389</td>
+                <td>0</td>
+                <td class="right" data-ratio="292 681">43%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_orm_dependency_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/orm/dependency.py</a></td>
+                <td>496</td>
+                <td>425</td>
+                <td>0</td>
+                <td class="right" data-ratio="71 496">14%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_orm_deprecated_interfaces_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/orm/deprecated_interfaces.py</a></td>
+                <td>91</td>
+                <td>53</td>
+                <td>0</td>
+                <td class="right" data-ratio="38 91">42%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_orm_descriptor_props_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/orm/descriptor_props.py</a></td>
+                <td>278</td>
+                <td>217</td>
+                <td>0</td>
+                <td class="right" data-ratio="61 278">22%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_orm_dynamic_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/orm/dynamic.py</a></td>
+                <td>211</td>
+                <td>149</td>
+                <td>0</td>
+                <td class="right" data-ratio="62 211">29%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_orm_evaluator_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/orm/evaluator.py</a></td>
+                <td>93</td>
+                <td>73</td>
+                <td>0</td>
+                <td class="right" data-ratio="20 93">22%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_orm_events_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/orm/events.py</a></td>
+                <td>334</td>
+                <td>169</td>
+                <td>0</td>
+                <td class="right" data-ratio="165 334">49%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_orm_exc_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/orm/exc.py</a></td>
+                <td>67</td>
+                <td>38</td>
+                <td>0</td>
+                <td class="right" data-ratio="29 67">43%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_orm_identity_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/orm/identity.py</a></td>
+                <td>231</td>
+                <td>165</td>
+                <td>0</td>
+                <td class="right" data-ratio="66 231">29%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_orm_instrumentation_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/orm/instrumentation.py</a></td>
+                <td>264</td>
+                <td>127</td>
+                <td>0</td>
+                <td class="right" data-ratio="137 264">52%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_orm_interfaces_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/orm/interfaces.py</a></td>
+                <td>170</td>
+                <td>74</td>
+                <td>0</td>
+                <td class="right" data-ratio="96 170">56%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_orm_loading_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/orm/loading.py</a></td>
+                <td>433</td>
+                <td>374</td>
+                <td>0</td>
+                <td class="right" data-ratio="59 433">14%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_orm_mapper_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/orm/mapper.py</a></td>
+                <td>1053</td>
+                <td>665</td>
+                <td>0</td>
+                <td class="right" data-ratio="388 1053">37%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_orm_path_registry_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/orm/path_registry.py</a></td>
+                <td>191</td>
+                <td>117</td>
+                <td>0</td>
+                <td class="right" data-ratio="74 191">39%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_orm_persistence_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py</a></td>
+                <td>693</td>
+                <td>615</td>
+                <td>0</td>
+                <td class="right" data-ratio="78 693">11%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_orm_properties_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/orm/properties.py</a></td>
+                <td>94</td>
+                <td>37</td>
+                <td>0</td>
+                <td class="right" data-ratio="57 94">61%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_orm_query_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/orm/query.py</a></td>
+                <td>1267</td>
+                <td>800</td>
+                <td>0</td>
+                <td class="right" data-ratio="467 1267">37%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_orm_relationships_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/orm/relationships.py</a></td>
+                <td>922</td>
+                <td>732</td>
+                <td>0</td>
+                <td class="right" data-ratio="190 922">21%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_orm_scoping_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/orm/scoping.py</a></td>
+                <td>64</td>
+                <td>28</td>
+                <td>0</td>
+                <td class="right" data-ratio="36 64">56%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_orm_session_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/orm/session.py</a></td>
+                <td>909</td>
+                <td>626</td>
+                <td>0</td>
+                <td class="right" data-ratio="283 909">31%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_orm_state_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/orm/state.py</a></td>
+                <td>350</td>
+                <td>249</td>
+                <td>0</td>
+                <td class="right" data-ratio="101 350">29%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_orm_strategies_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/orm/strategies.py</a></td>
+                <td>952</td>
+                <td>792</td>
+                <td>0</td>
+                <td class="right" data-ratio="160 952">17%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_orm_strategy_options_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/orm/strategy_options.py</a></td>
+                <td>553</td>
+                <td>430</td>
+                <td>0</td>
+                <td class="right" data-ratio="123 553">22%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_orm_sync_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/orm/sync.py</a></td>
+                <td>71</td>
+                <td>59</td>
+                <td>0</td>
+                <td class="right" data-ratio="12 71">17%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_orm_unitofwork_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py</a></td>
+                <td>354</td>
+                <td>278</td>
+                <td>0</td>
+                <td class="right" data-ratio="76 354">21%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_orm_util_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/orm/util.py</a></td>
+                <td>377</td>
+                <td>275</td>
+                <td>0</td>
+                <td class="right" data-ratio="102 377">27%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_pool___init___py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/pool/__init__.py</a></td>
+                <td>17</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="17 17">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_pool_base_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/pool/base.py</a></td>
+                <td>357</td>
+                <td>176</td>
+                <td>0</td>
+                <td class="right" data-ratio="181 357">51%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_pool_dbapi_proxy_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/pool/dbapi_proxy.py</a></td>
+                <td>54</td>
+                <td>38</td>
+                <td>0</td>
+                <td class="right" data-ratio="16 54">30%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_pool_impl_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/pool/impl.py</a></td>
+                <td>201</td>
+                <td>121</td>
+                <td>0</td>
+                <td class="right" data-ratio="80 201">40%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_processors_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/processors.py</a></td>
+                <td>86</td>
+                <td>65</td>
+                <td>0</td>
+                <td class="right" data-ratio="21 86">24%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_schema_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/schema.py</a></td>
+                <td>50</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="50 50">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_sql___init___py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/sql/__init__.py</a></td>
+                <td>84</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="84 84">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_sql_annotation_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/sql/annotation.py</a></td>
+                <td>102</td>
+                <td>39</td>
+                <td>0</td>
+                <td class="right" data-ratio="63 102">62%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_sql_base_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/sql/base.py</a></td>
+                <td>267</td>
+                <td>145</td>
+                <td>0</td>
+                <td class="right" data-ratio="122 267">46%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_sql_compiler_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/sql/compiler.py</a></td>
+                <td>1555</td>
+                <td>1011</td>
+                <td>0</td>
+                <td class="right" data-ratio="544 1555">35%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_sql_crud_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/sql/crud.py</a></td>
+                <td>309</td>
+                <td>275</td>
+                <td>1</td>
+                <td class="right" data-ratio="34 309">11%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_sql_ddl_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/sql/ddl.py</a></td>
+                <td>320</td>
+                <td>190</td>
+                <td>0</td>
+                <td class="right" data-ratio="130 320">41%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_sql_default_comparator_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/sql/default_comparator.py</a></td>
+                <td>132</td>
+                <td>75</td>
+                <td>0</td>
+                <td class="right" data-ratio="57 132">43%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_sql_dml_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/sql/dml.py</a></td>
+                <td>187</td>
+                <td>123</td>
+                <td>0</td>
+                <td class="right" data-ratio="64 187">34%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_sql_elements_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/sql/elements.py</a></td>
+                <td>1258</td>
+                <td>659</td>
+                <td>0</td>
+                <td class="right" data-ratio="599 1258">48%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_sql_expression_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/sql/expression.py</a></td>
+                <td>153</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="153 153">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_sql_functions_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/sql/functions.py</a></td>
+                <td>288</td>
+                <td>118</td>
+                <td>0</td>
+                <td class="right" data-ratio="170 288">59%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_sql_naming_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/sql/naming.py</a></td>
+                <td>106</td>
+                <td>60</td>
+                <td>0</td>
+                <td class="right" data-ratio="46 106">43%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_sql_operators_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/sql/operators.py</a></td>
+                <td>296</td>
+                <td>120</td>
+                <td>0</td>
+                <td class="right" data-ratio="176 296">59%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_sql_schema_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/sql/schema.py</a></td>
+                <td>1255</td>
+                <td>710</td>
+                <td>0</td>
+                <td class="right" data-ratio="545 1255">43%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_sql_selectable_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/sql/selectable.py</a></td>
+                <td>1057</td>
+                <td>622</td>
+                <td>0</td>
+                <td class="right" data-ratio="435 1057">41%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_sql_sqltypes_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/sql/sqltypes.py</a></td>
+                <td>870</td>
+                <td>514</td>
+                <td>0</td>
+                <td class="right" data-ratio="356 870">41%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_sql_type_api_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/sql/type_api.py</a></td>
+                <td>361</td>
+                <td>180</td>
+                <td>0</td>
+                <td class="right" data-ratio="181 361">50%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_sql_util_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/sql/util.py</a></td>
+                <td>439</td>
+                <td>336</td>
+                <td>0</td>
+                <td class="right" data-ratio="103 439">23%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_sql_visitors_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/sql/visitors.py</a></td>
+                <td>142</td>
+                <td>73</td>
+                <td>0</td>
+                <td class="right" data-ratio="69 142">49%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_types_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/types.py</a></td>
+                <td>58</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="58 58">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_util___init___py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/util/__init__.py</a></td>
+                <td>142</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="142 142">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_util__collections_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/util/_collections.py</a></td>
+                <td>629</td>
+                <td>312</td>
+                <td>0</td>
+                <td class="right" data-ratio="317 629">50%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_util_compat_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/util/compat.py</a></td>
+                <td>313</td>
+                <td>184</td>
+                <td>0</td>
+                <td class="right" data-ratio="129 313">41%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_util_deprecations_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/util/deprecations.py</a></td>
+                <td>106</td>
+                <td>13</td>
+                <td>0</td>
+                <td class="right" data-ratio="93 106">88%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_util_langhelpers_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py</a></td>
+                <td>851</td>
+                <td>368</td>
+                <td>0</td>
+                <td class="right" data-ratio="483 851">57%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_util_queue_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/util/queue.py</a></td>
+                <td>91</td>
+                <td>39</td>
+                <td>0</td>
+                <td class="right" data-ratio="52 91">57%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_home_ec2-user__local_lib_python3_6_site-packages_sqlalchemy_util_topological_py.html">/home/ec2-user/.local/lib/python3.6/site-packages/sqlalchemy/util/topological.py</a></td>
+                <td>47</td>
+                <td>33</td>
+                <td>0</td>
+                <td class="right" data-ratio="14 47">30%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="bot_py.html">bot.py</a></td>
+                <td>19</td>
+                <td>6</td>
+                <td>0</td>
+                <td class="right" data-ratio="13 19">68%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="main_py.html">main.py</a></td>
+                <td>128</td>
+                <td>69</td>
+                <td>0</td>
+                <td class="right" data-ratio="59 128">46%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="tests_mocked_unit_tests_py.html">tests/mocked_unit_tests.py</a></td>
+                <td>131</td>
+                <td>3</td>
+                <td>0</td>
+                <td class="right" data-ratio="128 131">98%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="tests_unmocked_unit_tests_py.html">tests/unmocked_unit_tests.py</a></td>
+                <td>49</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="49 49">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_click___init___py.html">/usr/local/lib/python3.6/site-packages/click/__init__.py</a></td>
+                <td>69</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="69 69">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_click__compat_py.html">/usr/local/lib/python3.6/site-packages/click/_compat.py</a></td>
+                <td>449</td>
+                <td>358</td>
+                <td>0</td>
+                <td class="right" data-ratio="91 449">20%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_click__unicodefun_py.html">/usr/local/lib/python3.6/site-packages/click/_unicodefun.py</a></td>
+                <td>71</td>
+                <td>60</td>
+                <td>0</td>
+                <td class="right" data-ratio="11 71">15%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_click_core_py.html">/usr/local/lib/python3.6/site-packages/click/core.py</a></td>
+                <td>912</td>
+                <td>635</td>
+                <td>0</td>
+                <td class="right" data-ratio="277 912">30%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_click_decorators_py.html">/usr/local/lib/python3.6/site-packages/click/decorators.py</a></td>
+                <td>150</td>
+                <td>87</td>
+                <td>0</td>
+                <td class="right" data-ratio="63 150">42%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_click_exceptions_py.html">/usr/local/lib/python3.6/site-packages/click/exceptions.py</a></td>
+                <td>127</td>
+                <td>89</td>
+                <td>0</td>
+                <td class="right" data-ratio="38 127">30%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_click_formatting_py.html">/usr/local/lib/python3.6/site-packages/click/formatting.py</a></td>
+                <td>137</td>
+                <td>115</td>
+                <td>0</td>
+                <td class="right" data-ratio="22 137">16%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_click_globals_py.html">/usr/local/lib/python3.6/site-packages/click/globals.py</a></td>
+                <td>18</td>
+                <td>12</td>
+                <td>0</td>
+                <td class="right" data-ratio="6 18">33%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_click_parser_py.html">/usr/local/lib/python3.6/site-packages/click/parser.py</a></td>
+                <td>239</td>
+                <td>203</td>
+                <td>0</td>
+                <td class="right" data-ratio="36 239">15%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_click_termui_py.html">/usr/local/lib/python3.6/site-packages/click/termui.py</a></td>
+                <td>211</td>
+                <td>168</td>
+                <td>0</td>
+                <td class="right" data-ratio="43 211">20%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_click_types_py.html">/usr/local/lib/python3.6/site-packages/click/types.py</a></td>
+                <td>327</td>
+                <td>195</td>
+                <td>0</td>
+                <td class="right" data-ratio="132 327">40%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_click_utils_py.html">/usr/local/lib/python3.6/site-packages/click/utils.py</a></td>
+                <td>196</td>
+                <td>142</td>
+                <td>0</td>
+                <td class="right" data-ratio="54 196">28%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_dataclasses_py.html">/usr/local/lib/python3.6/site-packages/dataclasses.py</a></td>
+                <td>351</td>
+                <td>281</td>
+                <td>0</td>
+                <td class="right" data-ratio="70 351">20%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_itsdangerous___init___py.html">/usr/local/lib/python3.6/site-packages/itsdangerous/__init__.py</a></td>
+                <td>21</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="21 21">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_itsdangerous__compat_py.html">/usr/local/lib/python3.6/site-packages/itsdangerous/_compat.py</a></td>
+                <td>22</td>
+                <td>11</td>
+                <td>0</td>
+                <td class="right" data-ratio="11 22">50%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_itsdangerous__json_py.html">/usr/local/lib/python3.6/site-packages/itsdangerous/_json.py</a></td>
+                <td>11</td>
+                <td>4</td>
+                <td>0</td>
+                <td class="right" data-ratio="7 11">64%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_itsdangerous_encoding_py.html">/usr/local/lib/python3.6/site-packages/itsdangerous/encoding.py</a></td>
+                <td>27</td>
+                <td>13</td>
+                <td>0</td>
+                <td class="right" data-ratio="14 27">52%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_itsdangerous_exc_py.html">/usr/local/lib/python3.6/site-packages/itsdangerous/exc.py</a></td>
+                <td>31</td>
+                <td>15</td>
+                <td>0</td>
+                <td class="right" data-ratio="16 31">52%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_itsdangerous_jws_py.html">/usr/local/lib/python3.6/site-packages/itsdangerous/jws.py</a></td>
+                <td>120</td>
+                <td>83</td>
+                <td>0</td>
+                <td class="right" data-ratio="37 120">31%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_itsdangerous_serializer_py.html">/usr/local/lib/python3.6/site-packages/itsdangerous/serializer.py</a></td>
+                <td>90</td>
+                <td>66</td>
+                <td>0</td>
+                <td class="right" data-ratio="24 90">27%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_itsdangerous_signer_py.html">/usr/local/lib/python3.6/site-packages/itsdangerous/signer.py</a></td>
+                <td>85</td>
+                <td>56</td>
+                <td>0</td>
+                <td class="right" data-ratio="29 85">34%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_itsdangerous_timed_py.html">/usr/local/lib/python3.6/site-packages/itsdangerous/timed.py</a></td>
+                <td>79</td>
+                <td>56</td>
+                <td>0</td>
+                <td class="right" data-ratio="23 79">29%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_itsdangerous_url_safe_py.html">/usr/local/lib/python3.6/site-packages/itsdangerous/url_safe.py</a></td>
+                <td>37</td>
+                <td>24</td>
+                <td>0</td>
+                <td class="right" data-ratio="13 37">35%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_jinja2___init___py.html">/usr/local/lib/python3.6/site-packages/jinja2/__init__.py</a></td>
+                <td>38</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="38 38">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_jinja2__compat_py.html">/usr/local/lib/python3.6/site-packages/jinja2/_compat.py</a></td>
+                <td>90</td>
+                <td>52</td>
+                <td>0</td>
+                <td class="right" data-ratio="38 90">42%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_jinja2__identifier_py.html">/usr/local/lib/python3.6/site-packages/jinja2/_identifier.py</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="2 2">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_jinja2_bccache_py.html">/usr/local/lib/python3.6/site-packages/jinja2/bccache.py</a></td>
+                <td>154</td>
+                <td>110</td>
+                <td>0</td>
+                <td class="right" data-ratio="44 154">29%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_jinja2_compiler_py.html">/usr/local/lib/python3.6/site-packages/jinja2/compiler.py</a></td>
+                <td>1150</td>
+                <td>978</td>
+                <td>0</td>
+                <td class="right" data-ratio="172 1150">15%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_jinja2_defaults_py.html">/usr/local/lib/python3.6/site-packages/jinja2/defaults.py</a></td>
+                <td>21</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="21 21">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_jinja2_environment_py.html">/usr/local/lib/python3.6/site-packages/jinja2/environment.py</a></td>
+                <td>541</td>
+                <td>399</td>
+                <td>0</td>
+                <td class="right" data-ratio="142 541">26%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_jinja2_exceptions_py.html">/usr/local/lib/python3.6/site-packages/jinja2/exceptions.py</a></td>
+                <td>83</td>
+                <td>58</td>
+                <td>0</td>
+                <td class="right" data-ratio="25 83">30%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_jinja2_filters_py.html">/usr/local/lib/python3.6/site-packages/jinja2/filters.py</a></td>
+                <td>417</td>
+                <td>313</td>
+                <td>0</td>
+                <td class="right" data-ratio="104 417">25%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_jinja2_idtracking_py.html">/usr/local/lib/python3.6/site-packages/jinja2/idtracking.py</a></td>
+                <td>204</td>
+                <td>155</td>
+                <td>0</td>
+                <td class="right" data-ratio="49 204">24%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_jinja2_lexer_py.html">/usr/local/lib/python3.6/site-packages/jinja2/lexer.py</a></td>
+                <td>356</td>
+                <td>234</td>
+                <td>0</td>
+                <td class="right" data-ratio="122 356">34%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_jinja2_loaders_py.html">/usr/local/lib/python3.6/site-packages/jinja2/loaders.py</a></td>
+                <td>228</td>
+                <td>171</td>
+                <td>0</td>
+                <td class="right" data-ratio="57 228">25%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_jinja2_nodes_py.html">/usr/local/lib/python3.6/site-packages/jinja2/nodes.py</a></td>
+                <td>458</td>
+                <td>243</td>
+                <td>0</td>
+                <td class="right" data-ratio="215 458">47%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_jinja2_optimizer_py.html">/usr/local/lib/python3.6/site-packages/jinja2/optimizer.py</a></td>
+                <td>17</td>
+                <td>10</td>
+                <td>0</td>
+                <td class="right" data-ratio="7 17">41%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_jinja2_parser_py.html">/usr/local/lib/python3.6/site-packages/jinja2/parser.py</a></td>
+                <td>648</td>
+                <td>587</td>
+                <td>0</td>
+                <td class="right" data-ratio="61 648">9%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_jinja2_runtime_py.html">/usr/local/lib/python3.6/site-packages/jinja2/runtime.py</a></td>
+                <td>435</td>
+                <td>298</td>
+                <td>0</td>
+                <td class="right" data-ratio="137 435">31%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_jinja2_tests_py.html">/usr/local/lib/python3.6/site-packages/jinja2/tests.py</a></td>
+                <td>64</td>
+                <td>30</td>
+                <td>0</td>
+                <td class="right" data-ratio="34 64">53%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_jinja2_utils_py.html">/usr/local/lib/python3.6/site-packages/jinja2/utils.py</a></td>
+                <td>317</td>
+                <td>218</td>
+                <td>0</td>
+                <td class="right" data-ratio="99 317">31%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_jinja2_visitor_py.html">/usr/local/lib/python3.6/site-packages/jinja2/visitor.py</a></td>
+                <td>40</td>
+                <td>31</td>
+                <td>0</td>
+                <td class="right" data-ratio="9 40">22%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_pytz___init___py.html">/usr/local/lib/python3.6/site-packages/pytz/__init__.py</a></td>
+                <td>196</td>
+                <td>123</td>
+                <td>0</td>
+                <td class="right" data-ratio="73 196">37%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_pytz_exceptions_py.html">/usr/local/lib/python3.6/site-packages/pytz/exceptions.py</a></td>
+                <td>7</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="7 7">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_pytz_lazy_py.html">/usr/local/lib/python3.6/site-packages/pytz/lazy.py</a></td>
+                <td>100</td>
+                <td>59</td>
+                <td>0</td>
+                <td class="right" data-ratio="41 100">41%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_pytz_tzfile_py.html">/usr/local/lib/python3.6/site-packages/pytz/tzfile.py</a></td>
+                <td>77</td>
+                <td>66</td>
+                <td>0</td>
+                <td class="right" data-ratio="11 77">14%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_pytz_tzinfo_py.html">/usr/local/lib/python3.6/site-packages/pytz/tzinfo.py</a></td>
+                <td>178</td>
+                <td>126</td>
+                <td>0</td>
+                <td class="right" data-ratio="52 178">29%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_six_py.html">/usr/local/lib/python3.6/site-packages/six.py</a></td>
+                <td>492</td>
+                <td>252</td>
+                <td>0</td>
+                <td class="right" data-ratio="240 492">49%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_urllib3___init___py.html">/usr/local/lib/python3.6/site-packages/urllib3/__init__.py</a></td>
+                <td>34</td>
+                <td>8</td>
+                <td>0</td>
+                <td class="right" data-ratio="26 34">76%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_urllib3__collections_py.html">/usr/local/lib/python3.6/site-packages/urllib3/_collections.py</a></td>
+                <td>181</td>
+                <td>133</td>
+                <td>0</td>
+                <td class="right" data-ratio="48 181">27%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_urllib3__version_py.html">/usr/local/lib/python3.6/site-packages/urllib3/_version.py</a></td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="1 1">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_urllib3_connection_py.html">/usr/local/lib/python3.6/site-packages/urllib3/connection.py</a></td>
+                <td>171</td>
+                <td>118</td>
+                <td>0</td>
+                <td class="right" data-ratio="53 171">31%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_urllib3_connectionpool_py.html">/usr/local/lib/python3.6/site-packages/urllib3/connectionpool.py</a></td>
+                <td>313</td>
+                <td>253</td>
+                <td>0</td>
+                <td class="right" data-ratio="60 313">19%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_urllib3_contrib___init___py.html">/usr/local/lib/python3.6/site-packages/urllib3/contrib/__init__.py</a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_urllib3_contrib__appengine_environ_py.html">/usr/local/lib/python3.6/site-packages/urllib3/contrib/_appengine_environ.py</a></td>
+                <td>11</td>
+                <td>1</td>
+                <td>0</td>
+                <td class="right" data-ratio="10 11">91%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_urllib3_contrib_socks_py.html">/usr/local/lib/python3.6/site-packages/urllib3/contrib/socks.py</a></td>
+                <td>75</td>
+                <td>51</td>
+                <td>0</td>
+                <td class="right" data-ratio="24 75">32%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_urllib3_exceptions_py.html">/usr/local/lib/python3.6/site-packages/urllib3/exceptions.py</a></td>
+                <td>100</td>
+                <td>23</td>
+                <td>0</td>
+                <td class="right" data-ratio="77 100">77%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_urllib3_fields_py.html">/usr/local/lib/python3.6/site-packages/urllib3/fields.py</a></td>
+                <td>90</td>
+                <td>70</td>
+                <td>0</td>
+                <td class="right" data-ratio="20 90">22%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_urllib3_filepost_py.html">/usr/local/lib/python3.6/site-packages/urllib3/filepost.py</a></td>
+                <td>43</td>
+                <td>30</td>
+                <td>0</td>
+                <td class="right" data-ratio="13 43">30%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_urllib3_packages___init___py.html">/usr/local/lib/python3.6/site-packages/urllib3/packages/__init__.py</a></td>
+                <td>3</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="3 3">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_urllib3_packages_six_py.html">/usr/local/lib/python3.6/site-packages/urllib3/packages/six.py</a></td>
+                <td>473</td>
+                <td>232</td>
+                <td>0</td>
+                <td class="right" data-ratio="241 473">51%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_urllib3_packages_ssl_match_hostname___init___py.html">/usr/local/lib/python3.6/site-packages/urllib3/packages/ssl_match_hostname/__init__.py</a></td>
+                <td>11</td>
+                <td>6</td>
+                <td>0</td>
+                <td class="right" data-ratio="5 11">45%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_urllib3_poolmanager_py.html">/usr/local/lib/python3.6/site-packages/urllib3/poolmanager.py</a></td>
+                <td>177</td>
+                <td>135</td>
+                <td>0</td>
+                <td class="right" data-ratio="42 177">24%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_urllib3_request_py.html">/usr/local/lib/python3.6/site-packages/urllib3/request.py</a></td>
+                <td>39</td>
+                <td>28</td>
+                <td>0</td>
+                <td class="right" data-ratio="11 39">28%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_urllib3_response_py.html">/usr/local/lib/python3.6/site-packages/urllib3/response.py</a></td>
+                <td>401</td>
+                <td>328</td>
+                <td>0</td>
+                <td class="right" data-ratio="73 401">18%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_urllib3_util___init___py.html">/usr/local/lib/python3.6/site-packages/urllib3/util/__init__.py</a></td>
+                <td>10</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="10 10">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_urllib3_util_connection_py.html">/usr/local/lib/python3.6/site-packages/urllib3/util/connection.py</a></td>
+                <td>66</td>
+                <td>45</td>
+                <td>0</td>
+                <td class="right" data-ratio="21 66">32%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_urllib3_util_queue_py.html">/usr/local/lib/python3.6/site-packages/urllib3/util/queue.py</a></td>
+                <td>14</td>
+                <td>5</td>
+                <td>0</td>
+                <td class="right" data-ratio="9 14">64%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_urllib3_util_request_py.html">/usr/local/lib/python3.6/site-packages/urllib3/util/request.py</a></td>
+                <td>50</td>
+                <td>37</td>
+                <td>0</td>
+                <td class="right" data-ratio="13 50">26%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_urllib3_util_response_py.html">/usr/local/lib/python3.6/site-packages/urllib3/util/response.py</a></td>
+                <td>35</td>
+                <td>29</td>
+                <td>0</td>
+                <td class="right" data-ratio="6 35">17%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_urllib3_util_retry_py.html">/usr/local/lib/python3.6/site-packages/urllib3/util/retry.py</a></td>
+                <td>152</td>
+                <td>104</td>
+                <td>0</td>
+                <td class="right" data-ratio="48 152">32%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_urllib3_util_ssl__py.html">/usr/local/lib/python3.6/site-packages/urllib3/util/ssl_.py</a></td>
+                <td>153</td>
+                <td>116</td>
+                <td>0</td>
+                <td class="right" data-ratio="37 153">24%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_urllib3_util_timeout_py.html">/usr/local/lib/python3.6/site-packages/urllib3/util/timeout.py</a></td>
+                <td>60</td>
+                <td>42</td>
+                <td>0</td>
+                <td class="right" data-ratio="18 60">30%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_urllib3_util_url_py.html">/usr/local/lib/python3.6/site-packages/urllib3/util/url.py</a></td>
+                <td>199</td>
+                <td>150</td>
+                <td>0</td>
+                <td class="right" data-ratio="49 199">25%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_urllib3_util_wait_py.html">/usr/local/lib/python3.6/site-packages/urllib3/util/wait.py</a></td>
+                <td>77</td>
+                <td>59</td>
+                <td>0</td>
+                <td class="right" data-ratio="18 77">23%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_werkzeug___init___py.html">/usr/local/lib/python3.6/site-packages/werkzeug/__init__.py</a></td>
+                <td>5</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="5 5">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_werkzeug__compat_py.html">/usr/local/lib/python3.6/site-packages/werkzeug/_compat.py</a></td>
+                <td>153</td>
+                <td>102</td>
+                <td>0</td>
+                <td class="right" data-ratio="51 153">33%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_werkzeug__internal_py.html">/usr/local/lib/python3.6/site-packages/werkzeug/_internal.py</a></td>
+                <td>250</td>
+                <td>195</td>
+                <td>0</td>
+                <td class="right" data-ratio="55 250">22%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_werkzeug_datastructures_py.html">/usr/local/lib/python3.6/site-packages/werkzeug/datastructures.py</a></td>
+                <td>1479</td>
+                <td>1007</td>
+                <td>0</td>
+                <td class="right" data-ratio="472 1479">32%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_werkzeug_debug___init___py.html">/usr/local/lib/python3.6/site-packages/werkzeug/debug/__init__.py</a></td>
+                <td>260</td>
+                <td>215</td>
+                <td>0</td>
+                <td class="right" data-ratio="45 260">17%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_werkzeug_debug_console_py.html">/usr/local/lib/python3.6/site-packages/werkzeug/debug/console.py</a></td>
+                <td>147</td>
+                <td>101</td>
+                <td>0</td>
+                <td class="right" data-ratio="46 147">31%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_werkzeug_debug_repr_py.html">/usr/local/lib/python3.6/site-packages/werkzeug/debug/repr.py</a></td>
+                <td>194</td>
+                <td>149</td>
+                <td>5</td>
+                <td class="right" data-ratio="45 194">23%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_werkzeug_debug_tbtools_py.html">/usr/local/lib/python3.6/site-packages/werkzeug/debug/tbtools.py</a></td>
+                <td>308</td>
+                <td>236</td>
+                <td>0</td>
+                <td class="right" data-ratio="72 308">23%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_werkzeug_exceptions_py.html">/usr/local/lib/python3.6/site-packages/werkzeug/exceptions.py</a></td>
+                <td>235</td>
+                <td>71</td>
+                <td>0</td>
+                <td class="right" data-ratio="164 235">70%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_werkzeug_filesystem_py.html">/usr/local/lib/python3.6/site-packages/werkzeug/filesystem.py</a></td>
+                <td>22</td>
+                <td>13</td>
+                <td>0</td>
+                <td class="right" data-ratio="9 22">41%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_werkzeug_formparser_py.html">/usr/local/lib/python3.6/site-packages/werkzeug/formparser.py</a></td>
+                <td>256</td>
+                <td>199</td>
+                <td>4</td>
+                <td class="right" data-ratio="57 256">22%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_werkzeug_http_py.html">/usr/local/lib/python3.6/site-packages/werkzeug/http.py</a></td>
+                <td>488</td>
+                <td>404</td>
+                <td>0</td>
+                <td class="right" data-ratio="84 488">17%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_werkzeug_local_py.html">/usr/local/lib/python3.6/site-packages/werkzeug/local.py</a></td>
+                <td>214</td>
+                <td>103</td>
+                <td>0</td>
+                <td class="right" data-ratio="111 214">52%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_werkzeug_routing_py.html">/usr/local/lib/python3.6/site-packages/werkzeug/routing.py</a></td>
+                <td>804</td>
+                <td>454</td>
+                <td>0</td>
+                <td class="right" data-ratio="350 804">44%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_werkzeug_security_py.html">/usr/local/lib/python3.6/site-packages/werkzeug/security.py</a></td>
+                <td>104</td>
+                <td>75</td>
+                <td>0</td>
+                <td class="right" data-ratio="29 104">28%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_werkzeug_serving_py.html">/usr/local/lib/python3.6/site-packages/werkzeug/serving.py</a></td>
+                <td>505</td>
+                <td>415</td>
+                <td>0</td>
+                <td class="right" data-ratio="90 505">18%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_werkzeug_test_py.html">/usr/local/lib/python3.6/site-packages/werkzeug/test.py</a></td>
+                <td>521</td>
+                <td>410</td>
+                <td>0</td>
+                <td class="right" data-ratio="111 521">21%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_werkzeug_urls_py.html">/usr/local/lib/python3.6/site-packages/werkzeug/urls.py</a></td>
+                <td>455</td>
+                <td>341</td>
+                <td>0</td>
+                <td class="right" data-ratio="114 455">25%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_werkzeug_useragents_py.html">/usr/local/lib/python3.6/site-packages/werkzeug/useragents.py</a></td>
+                <td>43</td>
+                <td>24</td>
+                <td>0</td>
+                <td class="right" data-ratio="19 43">44%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_werkzeug_utils_py.html">/usr/local/lib/python3.6/site-packages/werkzeug/utils.py</a></td>
+                <td>269</td>
+                <td>199</td>
+                <td>0</td>
+                <td class="right" data-ratio="70 269">26%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_werkzeug_wrappers___init___py.html">/usr/local/lib/python3.6/site-packages/werkzeug/wrappers/__init__.py</a></td>
+                <td>16</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="16 16">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_werkzeug_wrappers_accept_py.html">/usr/local/lib/python3.6/site-packages/werkzeug/wrappers/accept.py</a></td>
+                <td>14</td>
+                <td>4</td>
+                <td>0</td>
+                <td class="right" data-ratio="10 14">71%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_werkzeug_wrappers_auth_py.html">/usr/local/lib/python3.6/site-packages/werkzeug/wrappers/auth.py</a></td>
+                <td>16</td>
+                <td>9</td>
+                <td>0</td>
+                <td class="right" data-ratio="7 16">44%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_werkzeug_wrappers_base_request_py.html">/usr/local/lib/python3.6/site-packages/werkzeug/wrappers/base_request.py</a></td>
+                <td>176</td>
+                <td>99</td>
+                <td>0</td>
+                <td class="right" data-ratio="77 176">44%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_werkzeug_wrappers_base_response_py.html">/usr/local/lib/python3.6/site-packages/werkzeug/wrappers/base_response.py</a></td>
+                <td>227</td>
+                <td>170</td>
+                <td>0</td>
+                <td class="right" data-ratio="57 227">25%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_werkzeug_wrappers_common_descriptors_py.html">/usr/local/lib/python3.6/site-packages/werkzeug/wrappers/common_descriptors.py</a></td>
+                <td>98</td>
+                <td>41</td>
+                <td>0</td>
+                <td class="right" data-ratio="57 98">58%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_werkzeug_wrappers_cors_py.html">/usr/local/lib/python3.6/site-packages/werkzeug/wrappers/cors.py</a></td>
+                <td>20</td>
+                <td>4</td>
+                <td>0</td>
+                <td class="right" data-ratio="16 20">80%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_werkzeug_wrappers_etag_py.html">/usr/local/lib/python3.6/site-packages/werkzeug/wrappers/etag.py</a></td>
+                <td>110</td>
+                <td>69</td>
+                <td>0</td>
+                <td class="right" data-ratio="41 110">37%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_werkzeug_wrappers_json_py.html">/usr/local/lib/python3.6/site-packages/werkzeug/wrappers/json.py</a></td>
+                <td>65</td>
+                <td>43</td>
+                <td>0</td>
+                <td class="right" data-ratio="22 65">34%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_werkzeug_wrappers_request_py.html">/usr/local/lib/python3.6/site-packages/werkzeug/wrappers/request.py</a></td>
+                <td>12</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="12 12">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_werkzeug_wrappers_response_py.html">/usr/local/lib/python3.6/site-packages/werkzeug/wrappers/response.py</a></td>
+                <td>39</td>
+                <td>20</td>
+                <td>0</td>
+                <td class="right" data-ratio="19 39">49%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_werkzeug_wrappers_user_agent_py.html">/usr/local/lib/python3.6/site-packages/werkzeug/wrappers/user_agent.py</a></td>
+                <td>5</td>
+                <td>1</td>
+                <td>0</td>
+                <td class="right" data-ratio="4 5">80%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib_python3_6_site-packages_werkzeug_wsgi_py.html">/usr/local/lib/python3.6/site-packages/werkzeug/wsgi.py</a></td>
+                <td>439</td>
+                <td>365</td>
+                <td>0</td>
+                <td class="right" data-ratio="74 439">17%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib64_python3_6_site-packages_flask___init___py.html">/usr/local/lib64/python3.6/site-packages/flask/__init__.py</a></td>
+                <td>46</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="46 46">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib64_python3_6_site-packages_flask__compat_py.html">/usr/local/lib64/python3.6/site-packages/flask/_compat.py</a></td>
+                <td>81</td>
+                <td>47</td>
+                <td>0</td>
+                <td class="right" data-ratio="34 81">42%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib64_python3_6_site-packages_flask_app_py.html">/usr/local/lib64/python3.6/site-packages/flask/app.py</a></td>
+                <td>635</td>
+                <td>388</td>
+                <td>0</td>
+                <td class="right" data-ratio="247 635">39%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib64_python3_6_site-packages_flask_blueprints_py.html">/usr/local/lib64/python3.6/site-packages/flask/blueprints.py</a></td>
+                <td>179</td>
+                <td>133</td>
+                <td>0</td>
+                <td class="right" data-ratio="46 179">26%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib64_python3_6_site-packages_flask_cli_py.html">/usr/local/lib64/python3.6/site-packages/flask/cli.py</a></td>
+                <td>427</td>
+                <td>326</td>
+                <td>0</td>
+                <td class="right" data-ratio="101 427">24%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib64_python3_6_site-packages_flask_config_py.html">/usr/local/lib64/python3.6/site-packages/flask/config.py</a></td>
+                <td>91</td>
+                <td>65</td>
+                <td>0</td>
+                <td class="right" data-ratio="26 91">29%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib64_python3_6_site-packages_flask_ctx_py.html">/usr/local/lib64/python3.6/site-packages/flask/ctx.py</a></td>
+                <td>159</td>
+                <td>119</td>
+                <td>0</td>
+                <td class="right" data-ratio="40 159">25%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib64_python3_6_site-packages_flask_globals_py.html">/usr/local/lib64/python3.6/site-packages/flask/globals.py</a></td>
+                <td>27</td>
+                <td>12</td>
+                <td>0</td>
+                <td class="right" data-ratio="15 27">56%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib64_python3_6_site-packages_flask_helpers_py.html">/usr/local/lib64/python3.6/site-packages/flask/helpers.py</a></td>
+                <td>375</td>
+                <td>249</td>
+                <td>0</td>
+                <td class="right" data-ratio="126 375">34%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib64_python3_6_site-packages_flask_json___init___py.html">/usr/local/lib64/python3.6/site-packages/flask/json/__init__.py</a></td>
+                <td>130</td>
+                <td>97</td>
+                <td>0</td>
+                <td class="right" data-ratio="33 130">25%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib64_python3_6_site-packages_flask_json_tag_py.html">/usr/local/lib64/python3.6/site-packages/flask/json/tag.py</a></td>
+                <td>129</td>
+                <td>42</td>
+                <td>0</td>
+                <td class="right" data-ratio="87 129">67%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib64_python3_6_site-packages_flask_logging_py.html">/usr/local/lib64/python3.6/site-packages/flask/logging.py</a></td>
+                <td>35</td>
+                <td>22</td>
+                <td>0</td>
+                <td class="right" data-ratio="13 35">37%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib64_python3_6_site-packages_flask_sessions_py.html">/usr/local/lib64/python3.6/site-packages/flask/sessions.py</a></td>
+                <td>127</td>
+                <td>75</td>
+                <td>0</td>
+                <td class="right" data-ratio="52 127">41%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib64_python3_6_site-packages_flask_signals_py.html">/usr/local/lib64/python3.6/site-packages/flask/signals.py</a></td>
+                <td>32</td>
+                <td>3</td>
+                <td>0</td>
+                <td class="right" data-ratio="29 32">91%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib64_python3_6_site-packages_flask_templating_py.html">/usr/local/lib64/python3.6/site-packages/flask/templating.py</a></td>
+                <td>86</td>
+                <td>65</td>
+                <td>0</td>
+                <td class="right" data-ratio="21 86">24%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib64_python3_6_site-packages_flask_wrappers_py.html">/usr/local/lib64/python3.6/site-packages/flask/wrappers.py</a></td>
+                <td>39</td>
+                <td>17</td>
+                <td>0</td>
+                <td class="right" data-ratio="22 39">56%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib64_python3_6_site-packages_markupsafe___init___py.html">/usr/local/lib64/python3.6/site-packages/markupsafe/__init__.py</a></td>
+                <td>164</td>
+                <td>92</td>
+                <td>0</td>
+                <td class="right" data-ratio="72 164">44%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="_usr_local_lib64_python3_6_site-packages_markupsafe__compat_py.html">/usr/local/lib64/python3.6/site-packages/markupsafe/_compat.py</a></td>
+                <td>18</td>
+                <td>8</td>
+                <td>0</td>
+                <td class="right" data-ratio="10 18">56%</td>
+            </tr>
+        </tbody>
+    </table>
+    <p id="no_rows">
+        No items found using the specified filter.
+    </p>
+</div>
+<div id="footer">
+    <div class="content">
+        <p>
+            <a class="nav" href="https://coverage.readthedocs.io">coverage.py v5.3</a>,
+            created at 2020-10-28 02:16 +0000
+        </p>
+    </div>
+</div>
+</body>
+</html>
