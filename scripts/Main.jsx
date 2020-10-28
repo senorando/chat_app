@@ -29,10 +29,19 @@ export default function App() {
             image: data.imgUrl,
             sid: data.sid,
           }));
-          setStatus((prevStatus) => true); //
+          setStatus((prevStatus) => true);
         }
       });
       Socket.off('set user', '');
+      
+      Socket.on('failed login', (data) => {
+        if (data.sid === Socket.id) {
+          alert('Login Failed! \'' + data['email'] + '\' already logged in!');
+        }else{
+          alert('Someone just tried to login with your email! If this wasn\'t you then change your password immediately!');
+        }
+      });
+      Socket.off('failed login', '');
     });
   }
   getNewUser();

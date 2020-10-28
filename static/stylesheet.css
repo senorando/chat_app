@@ -49,7 +49,7 @@ input{
 #emails {
     font-size: 12px
 }
-#others{
+#others_cont{
     text-align: left;
     width: fit-content;
     background-color: #2b24ff;
@@ -63,6 +63,22 @@ input{
     color: #ffea87;
     text-decoration: none;
     font-style: italic;
+}
+#msg_head.others{
+    color: white;
+    text-align: left;
+    width: fit-content;
+    background-color: #ffffff00;
+    padding: 15px 4px;
+    margin: 10px 0;
+}
+#msg_head.chat_bot{
+    color: white;
+    text-align: left;
+    width: fit-content;
+    background-color: #ffffff00;
+    padding: 15px 4px;
+    margin: 10px 0;
 }
 #self{
     text-align: right;
@@ -80,7 +96,7 @@ input{
     text-decoration: none;
     font-style: italic;
 }
-#chat_bot{
+#chat_bot_cont{
     border: white;
     width: fit-content;
     border-style: groove;
@@ -129,6 +145,16 @@ h1 {
     height: 40px;
     width: 40px;
     padding: 0 5 0 5;
+}
+#msg_head{
+    background-color: white;
+}
+#msg_img{
+    float:left;
+    border: black;
+}
+#msg_name{
+    float:left;
 }
 ul {
     list-style-type: none;

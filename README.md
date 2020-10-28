@@ -1,4 +1,4 @@
-# Milestone 3 for Project 2
+# Chat App
 
 #### To use this repository you must install the following APIs/Frameworks
     -Flask
@@ -65,9 +65,11 @@ If that doesn't work: `sudo vim $(psql -c "show hba_file;" | grep pg_hba.conf)`
 
 ### Known Bugs
     -Occasionally messages and active users don't render until login
-    -Need to setup mocked tests
     -Token IDs don't refresh automatically
     
 ### Features To Add
     -More Login Methods
     -Hyperlink usernames
+
+### Issues Fixed
+    -Only one client can be signed into the same email at a time

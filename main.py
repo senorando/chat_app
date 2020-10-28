@@ -2,6 +2,7 @@ from os.path import join, dirname
 from dotenv import load_dotenv
 import os, flask, flask_sqlalchemy, flask_socketio, datetime, pytz
 from flask import request
+from sqlalchemy import func
 
 import bot
 
@@ -92,8 +93,16 @@ else:
 # -----------------------------------#
 def emit_all_messages(channel):
     global all_messages
+    db_messages = [ \
+        db_message for db_message \
+        in db.session.query(chatMessages).all()]
     all_messages = []
-    for msg in db.session.query(chatMessages).all():
+    for i in range(0, len(db_messages)):
+        msg = db_messages[i]
+        if i > 0:
+            prev_msg = db_messages[i - 1].user_id
+        else:
+            prev_msg = 'none'
         all_messages.append(
             {
                 "name": msg.name,
@@ -101,6 +110,7 @@ def emit_all_messages(channel):
                 "time": msg.time,
                 "image": msg.image,
                 "email": msg.user_id,
+                "prev_email": prev_msg
             }
         )
     socketio.emit(channel, {"allMessages": all_messages})
@@ -174,37 +184,46 @@ def on_new_google(data):
         "imgUrl": data["imgUrl"],
         "sid": request.sid,
     }
-    global numUsers
-    numUsers += 1
-    print(
-        "\nNew Google User!"
-        + "\n-->Name: "
-        + googleUsr["name"]
-        + "\n-->Email: "
-        + googleUsr["email"]
-        + "\n-->Image: "
-        + googleUsr["imgUrl"]
-        + "\nActive Users: "
-        + str(numUsers)
-    )
-
-    active_users.append(googleUsr)
-
-    socketio.emit("set user", googleUsr)
-    socketio.emit("active users", {"activeUsers": active_users, "numUsers": numUsers})
-    if db.session.query(Users.id).filter_by(id=googleUsr["email"]).scalar() is None:
-        db.session.add(Users(name=googleUsr["name"], id=googleUsr["email"]))
-        db.session.commit()
+    login_success = True
+    for user in active_users:
+        if user["email"] == googleUsr['email']:
+            login_success = False
+            break
+    if login_success:
+        global numUsers
+        numUsers += 1
         print(
-            "Created db Entry for "
+            "\nNew Google User!"
+            + "\n-->Name: "
             + googleUsr["name"]
-            + " with email "
+            + "\n-->Email: "
             + googleUsr["email"]
+            + "\n-->Image: "
+            + googleUsr["imgUrl"]
+            + "\nActive Users: "
+            + str(numUsers)
         )
+    
+        active_users.append(googleUsr)
+    
+        socketio.emit("set user", googleUsr)
+        socketio.emit("active users", {"activeUsers": active_users, "numUsers": numUsers})
+        if db.session.query(Users.id).filter_by(id=googleUsr["email"]).scalar() is None:
+            db.session.add(Users(name=googleUsr["name"], id=googleUsr["email"]))
+            db.session.commit()
+            print(
+                "Created db Entry for "
+                + googleUsr["name"]
+                + " with email "
+                + googleUsr["email"]
+            )
+        else:
+            print("Welcome Back! " + googleUsr["name"])
+    
+        emit_all_messages(MESSAGE_RECEIVED_CHANNEL)
     else:
-        print("Welcome Back! " + googleUsr["name"])
-
-    emit_all_messages(MESSAGE_RECEIVED_CHANNEL)
+        print('\nLogin Failed! \nUser with email \'' + googleUsr['email'] + '\' already logged in!')
+        socketio.emit('failed login', googleUsr)
 
 
 @socketio.on("connect")
