@@ -22,7 +22,7 @@ class chatBot:
             return 'Welcome to "Not Discord"! My name is BimboBOT and I\'m here to help you out with different things. Just type [!!help] to learn more about what I can do!'
         elif input.lower() == "!! help" or input.lower() == "!!help":
             return "All commands start with !! and are followed by the command with or without a space: !! about: Tells you about me! I'm not very interesting though :(, !! yoda [message] : Translates your message to yoda!"
-        elif input.lower() == "!!yoda" or input.lower() == "!! yoda":
+        elif input.lower()[:6] == "!!yoda " or input.lower()[:7] == "!! yoda ":
             return self.get_account_info(input[input.find("a") + 1 :])["contents"][
                 "translated"
             ]

@@ -7,8 +7,8 @@ import { Socket } from './Socket';
 
 export function Content(props) {
   const [chatLog, updateChat] = useState([]);
-  const { isLoggedIn } = props.isLoggedIn;
-  console.log(isLoggedIn);
+  const isLoggedIn = props.isLoggedIn;
+
   function nextLine() {
     useEffect(() => {
       Socket.on('message received', (data) => {
@@ -29,14 +29,15 @@ export function Content(props) {
       chatLog={chatLog}
     />
   );
-  const GoogleButton = isLoggedIn? 
+  const GoogleButton = isLoggedIn
+    ? (
       <TextBox
         name={props.name}
         email={props.email}
         image={props.image}
       />
-    : 
-      <Login />;
+    )
+    : <Login />;
   return (
     <div>
       { ChatboxEl }
