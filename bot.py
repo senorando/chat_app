@@ -4,7 +4,6 @@ from dotenv import load_dotenv
 
 
 class chatBot:
-    
     def funtranslate(self, input):
         headers = {"Content-Type": "application/json"}
         api_url = "https://api.funtranslations.com/translate/yoda.json?text={}".format(input)
@@ -33,12 +32,11 @@ class chatBot:
         joke =  json.dumps(json_body["content"]).replace("\"","").replace("\\", "")
         
         return joke
-        
-    
+
     def command(self, input):
         INVALID_COMMAND = "Command not recognized. Please try one of these: !! [about|help|yoda]"
         ABOUT = 'Welcome to "Not Discord"! My name is BimboBOT and I\'m here to help you out with different things. I\'m a bit of a bimbo (hence the name) but I try my best and that\'s what counts! '
-        HELP = "All commands start with \"!!\" and are followed by the command and any parameters: !! <about|help|yoda [message]>"
+        HELP = "All commands start with \"!!\" and are followed by the command and any parameters: !! <about|help|joke|yoda [message]>"
         YODA_FAIL = "Please enter a word or phrase to translate. (Ex: !!yoda The quick brown fox jumped over the lazy dog)"
         
         COMMAND = input.lower()
