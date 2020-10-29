@@ -73,3 +73,7 @@ If that doesn't work: `sudo vim $(psql -c "show hba_file;" | grep pg_hba.conf)`
 
 ### Issues Fixed
     -Only one client can be signed into the same email at a time
+
+### Features Added
+    -BimboBOT now has !!joke and !!bible commands
+    -Username shown only once on back to back messages
