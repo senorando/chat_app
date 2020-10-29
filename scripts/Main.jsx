@@ -50,10 +50,9 @@ export default function App() {
       <h1 id="title">Not Discord</h1>
       <p id="welcome">
         {' '}
-        Welcome!
+        Signed in as:{' '}
         <strong>
           { name }
-          {' '}
         </strong>
       </p>
       <Users
