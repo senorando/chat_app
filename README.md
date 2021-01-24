@@ -1,5 +1,6 @@
 # Chat App
-#### Heroku Link to View the App
+
+#### [Def Not Discord](def-not-discord.herokuapp.com)
 
 #### To use this repository you must install the following APIs/Frameworks
     -Flask
